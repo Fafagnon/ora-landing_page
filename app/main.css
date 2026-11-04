@@ -974,45 +974,104 @@ h4 {
   background: rgba(229, 244, 238, 0.15);
 }
 
-/* Petit CTA simple en bas de l'arbitrage */
-.matrix-advisor-cta {
-  margin-top: 36px;
+/* Bannière CTA Conseiller sous l'arbitrage */
+.matrix-advisor-banner {
+  margin-top: 48px;
+  background: linear-gradient(135deg, rgba(9, 76, 54, 0.04) 0%, rgba(37, 211, 102, 0.07) 100%);
+  border: 1.5px solid rgba(9, 76, 54, 0.16);
+  border-radius: 20px;
+  padding: clamp(24px, 4vw, 36px) clamp(24px, 4.5vw, 44px);
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 16px;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 28px;
+  box-shadow: 0 8px 24px -4px rgba(9, 33, 22, 0.04);
 }
 
-.matrix-advisor-cta__text {
+.matrix-advisor-banner__content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+}
+
+.matrix-advisor-banner__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font-family: var(--font-sans);
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: #07261C;
+  font-size: 0.775rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #094C36;
 }
 
-.matrix-advisor-cta__btn {
+.matrix-advisor-banner__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #25D366;
+  box-shadow: 0 0 8px #25D366;
+  animation: pulseDot 2s infinite;
+}
+
+.matrix-advisor-banner__title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 2.2vw, 1.85rem);
+  font-weight: 500;
+  color: #07261C;
+  letter-spacing: -0.015em;
+  margin: 0;
+}
+
+.matrix-advisor-banner__lead {
+  font-size: 0.95rem;
+  color: #4A5D54;
+  margin: 0;
+}
+
+.matrix-advisor-banner__action {
+  flex-shrink: 0;
+}
+
+.btn-advisor-whatsapp-highlight {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  min-height: 46px;
-  padding: 10px 22px;
+  gap: 10px;
+  min-height: 52px;
+  padding: 13px 28px;
   border-radius: 9999px;
   background: #25D366;
   color: #042618;
   font-family: var(--font-sans);
-  font-weight: 600;
-  font-size: 0.925rem;
+  font-weight: 700;
+  font-size: 1rem;
   text-decoration: none;
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 4px 14px -2px rgba(37, 211, 102, 0.35);
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 8px 20px -2px rgba(37, 211, 102, 0.38);
+  box-sizing: border-box;
 }
 
-.matrix-advisor-cta__btn:hover {
+.btn-advisor-whatsapp-highlight:hover {
   background: #22BF5B;
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px -2px rgba(37, 211, 102, 0.45);
+  box-shadow: 0 12px 28px -2px rgba(37, 211, 102, 0.48);
+}
+
+@media (max-width: 768px) {
+  .matrix-advisor-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 24px 20px;
+  }
+
+  .matrix-advisor-banner__action,
+  .btn-advisor-whatsapp-highlight {
+    width: 100%;
+  }
 }
 
 /* ==========================================================================

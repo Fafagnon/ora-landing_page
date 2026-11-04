@@ -4,7 +4,7 @@ import { useState } from "react";
 
 export default function CtaBanner() {
   const [submitted, setSubmitted] = useState(false);
-  const [country, setCountry] = useState("+228");
+  const [country, setCountry] = useState("");
   const [phone, setPhone] = useState("");
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
@@ -48,7 +48,6 @@ export default function CtaBanner() {
                     id="fullname"
                     type="text"
                     required
-                    placeholder="Ex. Koffi Mensah"
                     value={fullName}
                     onChange={(e) => setFullName(e.target.value)}
                     className="contact-form-input"
@@ -64,7 +63,6 @@ export default function CtaBanner() {
                     id="email"
                     type="email"
                     required
-                    placeholder="nom@exemple.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     className="contact-form-input"
@@ -79,11 +77,13 @@ export default function CtaBanner() {
                   <div className="contact-form-phone-row">
                     <select
                       id="phone-country"
-                      aria-label="Choisir un pays"
+                      aria-label="Choisir un indicatif"
+                      required
                       value={country}
                       onChange={(e) => setCountry(e.target.value)}
                       className="contact-form-select"
                     >
+                      <option value="" disabled>Indicatif</option>
                       <option value="+228">Togo (+228)</option>
                       <option value="+226">Burkina Faso (+226)</option>
                       <option value="+225">Côte d&apos;Ivoire (+225)</option>
@@ -98,7 +98,6 @@ export default function CtaBanner() {
                       id="phone-number"
                       type="tel"
                       required
-                      placeholder="Numéro de téléphone"
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
                       className="contact-form-input contact-form-input--phone"
@@ -115,7 +114,6 @@ export default function CtaBanner() {
                     id="farmname"
                     type="text"
                     required
-                    placeholder="Ex. Ferme Avicole de Kara"
                     value={farmName}
                     onChange={(e) => setFarmName(e.target.value)}
                     className="contact-form-input"
