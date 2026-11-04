@@ -31,7 +31,9 @@
   --section-pad: clamp(72px, 8vw, 120px);
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -58,7 +60,8 @@ body {
   }
 }
 
-img, video {
+img,
+video {
   max-width: 100%;
   height: auto;
   display: block;
@@ -69,7 +72,10 @@ p {
 }
 
 /* Typographie Éditoriale */
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: var(--font-serif);
   font-weight: 500;
   margin: 0;
@@ -125,6 +131,7 @@ h3 {
   z-index: 100;
   font-weight: 600;
 }
+
 .skip:focus {
   left: 16px;
 }
@@ -155,6 +162,7 @@ h3 {
   color: var(--ground);
   border: 1px solid var(--ink);
 }
+
 .btn-primary:hover {
   background: #133324;
   border-color: #133324;
@@ -166,6 +174,7 @@ h3 {
   color: var(--ink);
   border: 1px solid var(--border-strong);
 }
+
 .btn-secondary:hover {
   background: var(--ground-soft);
   border-color: var(--ink);
@@ -455,8 +464,13 @@ h3 {
 }
 
 @keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .marquee-track span {
@@ -1240,28 +1254,28 @@ h3 {
   .hero__grid {
     grid-template-columns: 1fr;
   }
-  
+
   .solutions__diptych {
     grid-template-columns: 1fr;
   }
-  
+
   .screen-item,
   .screen-item--reverse {
     grid-template-columns: 1fr;
   }
-  
+
   .screen-item--reverse .screen-item__visual {
     order: 0;
   }
-  
+
   .screen-item--reverse .screen-item__info {
     order: 0;
   }
-  
+
   .video-chapters {
     grid-template-columns: 1fr;
   }
-  
+
   .footer__grid {
     grid-template-columns: 1fr;
   }
@@ -1271,23 +1285,23 @@ h3 {
   .nav {
     display: none;
   }
-  
+
   .header__location {
     display: none;
   }
-  
+
   .matrix-table th,
   .matrix-table td {
     padding: 14px 16px;
     font-size: 0.875rem;
   }
-  
+
   .hero__actions,
   .contact-actions {
     flex-direction: column;
     width: 100%;
   }
-  
+
   .btn {
     width: 100%;
   }
@@ -1341,7 +1355,21 @@ h3 {
   mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
 }
 
-.spotlight-card > *:not(.spotlight-card__light):not(.spotlight-card__edge) {
+.spotlight-card>*:not(.spotlight-card__light):not(.spotlight-card__edge) {
   position: relative;
   z-index: 2;
+}
+
+
+/* Utilitaires d'accessibilité */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }

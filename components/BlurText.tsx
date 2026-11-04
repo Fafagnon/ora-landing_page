@@ -65,8 +65,12 @@ export default function BlurText({
   const yOffset = direction === "top" ? -14 : 14;
 
   return (
-    <span ref={ref} className={`blur-text ${className}`}>
-      <span className="sr-only">{text}</span>
+    <span
+      ref={ref}
+      className={`blur-text ${className}`}
+      aria-label={text}
+      role="text"
+    >
       {items.map((item, idx) => {
         const itemDelay = idx * delay;
         return (
@@ -89,3 +93,4 @@ export default function BlurText({
     </span>
   );
 }
+
