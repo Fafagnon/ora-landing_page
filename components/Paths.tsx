@@ -20,7 +20,7 @@ export default function Paths() {
     },
     {
       critere: "Connexion internet",
-      logiciel: "Saisie 100% hors-ligne au poulailler",
+      logiciel: "Saisie des données journalières même hors ligne",
       services: "Prise en charge intégrale sans dépendance",
     },
     {
@@ -41,12 +41,11 @@ export default function Paths() {
       <section id="solutions" className="solutions-editorial" aria-labelledby="solutions-title">
         <div className="wrap">
           <div className="solutions-editorial__header">
-            <span className="editorial-eyebrow">Modèles d&apos;intervention</span>
             <h2 id="solutions-title" className="editorial-section-title">
               Deux formules adaptées à votre réalité
             </h2>
             <p className="editorial-lead">
-              Que vous pilotiez vous-même au poulailler ou que vous déléguiez l&apos;intégralité des opérations depuis la ville ou l&apos;étranger.
+              Que vous pilotiez vous-même au poulailler ou que vous déléguiez l&apos;intégralité des opérations.
             </p>
           </div>
 
@@ -61,7 +60,6 @@ export default function Paths() {
             >
               <div className="solution-card__badge-row">
                 <span className="solution-card__pill">Autonomie de gestion</span>
-                <span className="solution-card__target">Pour l&apos;exploitant sur place</span>
               </div>
 
               <div className="solution-card__heading">
@@ -84,19 +82,31 @@ export default function Paths() {
                   <svg className="solution-card__check" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span>Saisie 100% hors-ligne au fond du bâtiment</span>
+                  <span>Saisie des données journalières même hors ligne</span>
                 </li>
                 <li>
                   <svg className="solution-card__check" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span>Alertes de mortalité et calendrier vaccinal automatique</span>
+                  <span>Gestion des stocks d&apos;aliment, autonomie en jours et provenderie</span>
                 </li>
                 <li>
                   <svg className="solution-card__check" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span>Calcul d&apos;autonomie d&apos;aliment et formulation provende</span>
+                  <span>Gestion des ventes, des dépenses et suivi de trésorerie</span>
+                </li>
+                <li>
+                  <svg className="solution-card__check" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span>Gestion des employés (pointage de présence et calcul automatique des salaires)</span>
+                </li>
+                <li>
+                  <svg className="solution-card__check" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span>Gestion des équipements et alertes sanitaires du cheptel</span>
                 </li>
               </ul>
 
@@ -120,7 +130,6 @@ export default function Paths() {
             >
               <div className="solution-card__badge-row">
                 <span className="solution-card__pill solution-card__pill--emerald">Prise en main totale</span>
-                <span className="solution-card__target">Pour la diaspora et non-résidents</span>
               </div>
 
               <div className="solution-card__heading">
@@ -133,9 +142,7 @@ export default function Paths() {
               <div className="solution-card__price-box">
                 <div className="solution-card__amount">
                   <span className="solution-card__figure">Sur devis</span>
-                  <span className="solution-card__unit">selon cheptel</span>
                 </div>
-                <span className="solution-card__trial-badge solution-card__trial-badge--soft">Diagnostic initial inclus</span>
               </div>
 
               <ul className="solution-card__keypoints">
@@ -176,7 +183,6 @@ export default function Paths() {
       <section id="tarifs" className="matrix-editorial" aria-labelledby="matrix-title">
         <div className="wrap">
           <div className="matrix-editorial__header">
-            <span className="editorial-eyebrow">Arbitrage objectif</span>
             <h2 id="matrix-title" className="editorial-section-title">
               Quelle formule choisir pour votre exploitation ?
             </h2>
@@ -192,11 +198,9 @@ export default function Paths() {
                   <tr>
                     <th scope="col" className="matrix-col-critere">Critère clé</th>
                     <th scope="col" className="matrix-col-solution">
-                      <span className="matrix-col-tag">Autonomie</span>
                       <strong className="matrix-col-name">ORA Logiciel</strong>
                     </th>
                     <th scope="col" className="matrix-col-solution matrix-col-solution--featured">
-                      <span className="matrix-col-tag matrix-col-tag--emerald">Prise en main</span>
                       <strong className="matrix-col-name">ORA Gestion déléguée</strong>
                     </th>
                   </tr>

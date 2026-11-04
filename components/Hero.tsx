@@ -13,11 +13,11 @@ export default function Hero() {
       {/* Arrière-plan panoramique avec brume et fondus atmosphériques */}
       <div className="hero-editorial__backdrop" aria-hidden="true">
         <Image
-          src="/hero-landscape.jpg"
+          src="/hero-ora.jpg"
           alt=""
           fill
           priority
-          quality={92}
+          sizes="100vw"
           className="hero-editorial__img"
         />
         <div className="hero-editorial__fade-top" />

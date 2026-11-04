@@ -634,9 +634,11 @@ h3 {
   border: 1px solid rgba(9, 76, 54, 0.06);
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   gap: 12px;
   flex-wrap: wrap;
+  min-height: 64px;
+  box-sizing: border-box;
 }
 
 .solution-card__amount {
