@@ -23,10 +23,6 @@ export default function Footer() {
             <p className="footer-dark__desc">
               Cabinet de conseil et de gestion d&apos;élevage au Togo et au Burkina Faso. Solutions logicielles terrain et gestion déléguée pour exploitations avicoles et agricoles.
             </p>
-            <div className="footer-dark__cities">
-              <span className="footer-dark__city-badge">Lomé, Togo</span>
-              <span className="footer-dark__city-badge">Ouagadougou, Burkina Faso</span>
-            </div>
           </div>
 
           {/* Colonne 2 : Navigation rapide */}
