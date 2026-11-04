@@ -1,138 +1,157 @@
-import Image from "next/image";
 import { site } from "@/lib/site.config";
 
 export default function Paths() {
   const comparisonRows = [
     {
-      critere: "Profil de l'exploitant",
-      logiciel: "Éleveur ou gérant présent au quotidien sur la ferme",
-      services: "Propriétaire non-résident, cadre en ville ou investisseur de la diaspora",
+      critere: "Profil visé",
+      logiciel: "Éleveur ou gérant présent au quotidien",
+      services: "Propriétaire non-résident, cadre urbain, diaspora",
     },
     {
-      critere: "Temps d'implication",
-      logiciel: "5 à 10 minutes par jour pour enregistrer les opérations sur mobile",
-      services: "Zéro temps requis : nos techniciens assurent l'intégralité des tâches",
+      critere: "Temps requis",
+      logiciel: "5 minutes par jour sur smartphone",
+      services: "Zéro temps requis, gestion 100% déléguée",
     },
     {
-      critere: "Présence sur l'exploitation",
-      logiciel: "Vous assurez vous-même les tournées dans les bâtiments",
-      services: "Visites régulières, audits et interventions sur site par nos équipes ORA",
+      critere: "Présence terrain",
+      logiciel: "Assurée par vos soins au bâtiment",
+      services: "Techniciens ORA déployés sur votre ferme",
     },
     {
       critere: "Connexion internet",
-      logiciel: "Saisie hors-ligne au poulailler, synchronisation dès détection du réseau",
-      services: "Prise en charge complète sans aucune dépendance à la connectivité",
+      logiciel: "Saisie 100% hors-ligne au poulailler",
+      services: "Prise en charge intégrale sans dépendance",
     },
     {
-      critere: "Santé & Prophylaxie",
-      logiciel: "Calendrier vaccinal automatisé avec alertes avant chaque date critique",
-      services: "Protocoles sanitaires appliqués et vérifiés directement par nos spécialistes",
-    },
-    {
-      critere: "Alimentation & Provenderie",
-      logiciel: "Calcul de l'autonomie en jours et formulation de vos recettes à la ferme",
-      services: "Sécurisation des intrants, contrôle du coulage et optimisation des rations",
-    },
-    {
-      critere: "Visibilité & Rapports",
-      logiciel: "Tableaux de bord, courbes de ponte et marges calculées dans l'application",
-      services: "Bilans hebdomadaires chiffrés et photographies transmis sur WhatsApp",
+      critere: "Suivi des résultats",
+      logiciel: "Tableaux de bord et alertes en direct",
+      services: "Bilans hebdomadaires et photos sur WhatsApp",
     },
     {
       critere: "Tarification",
-      logiciel: `${site.price} par mois (${site.trial} sans engagement)`,
-      services: "Sur contrat et devis personnalisé selon la taille de votre cheptel",
+      logiciel: "5 000 F CFA / mois (1 mois d'essai offert)",
+      services: "Sur devis personnalisé selon cheptel",
     },
   ];
 
   return (
     <>
-      {/* Diptyque des Formules : Solutions */}
-      <section id="solutions" className="solutions" aria-labelledby="solutions-title">
+      {/* Section 1 : Deux modèles d'intervention */}
+      <section id="solutions" className="solutions-editorial" aria-labelledby="solutions-title">
         <div className="wrap">
-          <div className="section-meta">
-            <span className="section-meta__num">Deux modèles d&apos;intervention</span>
-            <h2 id="solutions-title">Deux façons de travailler avec ORA</h2>
-            <p className="lead" style={{ marginTop: 12 }}>
-              Une même exigence de rigueur économique. Choisissez la formule qui correspond à votre présence sur le terrain.
+          <div className="solutions-editorial__header">
+            <span className="editorial-eyebrow">Modèles d&apos;intervention</span>
+            <h2 id="solutions-title" className="editorial-section-title">
+              Deux formules adaptées à votre réalité
+            </h2>
+            <p className="editorial-lead">
+              Que vous pilotiez vous-même au poulailler ou que vous déléguiez l&apos;intégralité des opérations depuis la ville ou l&apos;étranger.
             </p>
           </div>
 
-          <div className="solutions__diptych">
-            {/* Formule 1 : Logiciel */}
-            <article className="solution-panel">
-              <div className="solution-panel__media">
-                <Image
-                  src="/ora-technicien-poulailler.png"
-                  alt="Technicien avicole au travail avec la tablette ORA"
-                  width={700}
-                  height={400}
-                />
+          <div className="solutions-cards-grid">
+            {/* Carte 1 : ORA Logiciel */}
+            <article className="solution-card">
+              <div className="solution-card__badge-row">
+                <span className="solution-card__pill">Autonomie de gestion</span>
+                <span className="solution-card__target">Pour l&apos;exploitant sur place</span>
               </div>
 
-              <div className="solution-panel__body">
-                <div className="solution-panel__meta">
-                  <span className="solution-panel__tag">Autonomie de gestion</span>
-                  <span className="solution-panel__price">{site.price} <small style={{ fontSize: "0.85rem", color: "var(--ink-muted)" }}>/ mois</small></span>
+              <div className="solution-card__heading">
+                <h3 className="solution-card__title">ORA Logiciel</h3>
+                <p className="solution-card__pitch">
+                  Prenez le contrôle total de vos coûts, de la ponte et des stocks au quotidien.
+                </p>
+              </div>
+
+              <div className="solution-card__price-box">
+                <div className="solution-card__amount">
+                  <span className="solution-card__figure">{site.price}</span>
+                  <span className="solution-card__unit">/ mois</span>
                 </div>
+                <span className="solution-card__trial-badge">1 mois d&apos;essai offert</span>
+              </div>
 
-                <div>
-                  <h3>ORA Logiciel</h3>
-                  <p style={{ color: "var(--ink-light)", marginTop: 6, fontSize: "0.95rem" }}>
-                    Pour l&apos;éleveur qui gère son cheptel lui-même et veut maîtriser chaque poste de dépense.
-                  </p>
-                </div>
+              <ul className="solution-card__keypoints">
+                <li>
+                  <svg className="solution-card__check" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span>Saisie 100% hors-ligne au fond du bâtiment</span>
+                </li>
+                <li>
+                  <svg className="solution-card__check" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span>Alertes de mortalité et calendrier vaccinal automatique</span>
+                </li>
+                <li>
+                  <svg className="solution-card__check" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span>Calcul d&apos;autonomie d&apos;aliment et formulation provende</span>
+                </li>
+              </ul>
 
-                <ul className="solution-panel__list">
-                  <li>Saisie au fond du poulailler sans aucune connexion internet requise.</li>
-                  <li>Synchronisation automatique des données dès que le téléphone capte le réseau.</li>
-                  <li>Calcul de l&apos;autonomie d&apos;aliment en jours et alertes de seuil critique.</li>
-                  <li>Suivi des pontes, tri des œufs déclassés et calendrier vaccinal automatique.</li>
-                  <li>Module de provenderie pour fabriquer son aliment et réduire ses charges.</li>
-                  <li>{site.trial} sans carte bancaire ni engagement.</li>
-                </ul>
-
-                <a className="btn btn-primary" href="#contact">
-                  Démarrer l&apos;essai du logiciel
+              <div className="solution-card__action">
+                <a className="btn-solution btn-solution--outline" href="#contact">
+                  <span>Démarrer l&apos;essai gratuit</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
                 </a>
               </div>
             </article>
 
-            {/* Formule 2 : Services */}
-            <article className="solution-panel">
-              <div className="solution-panel__media">
-                <Image
-                  src="/ora-partenariat-poignee-de-main.png"
-                  alt="Accord de gestion déléguée ORA Services entre partenaires"
-                  width={700}
-                  height={400}
-                />
+            {/* Carte 2 : ORA Gestion déléguée */}
+            <article className="solution-card solution-card--featured">
+              <div className="solution-card__badge-row">
+                <span className="solution-card__pill solution-card__pill--emerald">Prise en main totale</span>
+                <span className="solution-card__target">Pour la diaspora et non-résidents</span>
               </div>
 
-              <div className="solution-panel__body">
-                <div className="solution-panel__meta">
-                  <span className="solution-panel__tag">Délégation intégrale</span>
-                  <span className="solution-panel__price">Sur mesure</span>
+              <div className="solution-card__heading">
+                <h3 className="solution-card__title">ORA Gestion déléguée</h3>
+                <p className="solution-card__pitch">
+                  Confiez l&apos;exploitation à nos spécialistes sans subir le stress du terrain.
+                </p>
+              </div>
+
+              <div className="solution-card__price-box">
+                <div className="solution-card__amount">
+                  <span className="solution-card__figure">Sur devis</span>
+                  <span className="solution-card__unit">selon cheptel</span>
                 </div>
+                <span className="solution-card__trial-badge solution-card__trial-badge--soft">Diagnostic initial inclus</span>
+              </div>
 
-                <div>
-                  <h3>ORA Services</h3>
-                  <p style={{ color: "var(--ink-light)", marginTop: 6, fontSize: "0.95rem" }}>
-                    Pour les propriétaires non-résidents et investisseurs qui confient la conduite de leur exploitation.
-                  </p>
-                </div>
+              <ul className="solution-card__keypoints">
+                <li>
+                  <svg className="solution-card__check solution-card__check--emerald" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span>Techniciens ORA expérimentés détachés sur votre exploitation</span>
+                </li>
+                <li>
+                  <svg className="solution-card__check solution-card__check--emerald" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span>Contrôle strict des intrants pour stopper le vol et le coulage</span>
+                </li>
+                <li>
+                  <svg className="solution-card__check solution-card__check--emerald" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span>Bilans hebdomadaires chiffrés et photographies sur WhatsApp</span>
+                </li>
+              </ul>
 
-                <ul className="solution-panel__list">
-                  <li>Présence sur site : techniciens et agronomes ORA détachés sur votre exploitation.</li>
-                  <li>Audit technique complet, suivi sanitaire rigoureux et application des traitements.</li>
-                  <li>Sécurisation des intrants pour stopper le vol et le gaspillage d&apos;aliment.</li>
-                  <li>Pointage objectif des ouvriers pour éliminer les contestations de paie.</li>
-                  <li>Rapports hebdomadaires WhatsApp avec chiffres de ponte, photos et comptabilité.</li>
-                  <li>Idéal pour la diaspora togolaise et burkinabè ou les cadres en ville.</li>
-                </ul>
-
-                <a className="btn btn-secondary" href="#contact">
-                  Demander un diagnostic de ferme
+              <div className="solution-card__action">
+                <a className="btn-solution btn-solution--solid" href="#contact">
+                  <span>Demander un diagnostic de ferme</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
                 </a>
               </div>
             </article>
@@ -140,36 +159,52 @@ export default function Paths() {
         </div>
       </section>
 
-      {/* Matrice Comparative & Tarifs */}
-      <section id="tarifs" className="matrix-section" aria-labelledby="matrix-title">
+      {/* Section 2 : Arbitrage objectif (Tableau comparatif épuré) */}
+      <section id="tarifs" className="matrix-editorial" aria-labelledby="matrix-title">
         <div className="wrap">
-          <div className="section-meta">
-            <span className="section-meta__num">Arbitrage objectif</span>
-            <h2 id="matrix-title">Tableau comparatif des deux solutions</h2>
-            <p className="lead" style={{ marginTop: 12 }}>
-              Pour déterminer rapidement l&apos;option la plus adaptée à vos contraintes de temps et de localisation.
+          <div className="matrix-editorial__header">
+            <span className="editorial-eyebrow">Arbitrage objectif</span>
+            <h2 id="matrix-title" className="editorial-section-title">
+              Quelle formule choisir pour votre exploitation ?
+            </h2>
+            <p className="editorial-lead">
+              Un comparatif direct pour identifier en quelques secondes la solution adaptée à votre disponibilité et vos objectifs.
             </p>
           </div>
 
-          <div className="matrix-wrapper">
-            <table className="matrix-table">
-              <thead>
-                <tr>
-                  <th scope="col">Critère d&apos;arbitrage</th>
-                  <th scope="col">ORA Logiciel</th>
-                  <th scope="col">ORA Services</th>
-                </tr>
-              </thead>
-              <tbody>
-                {comparisonRows.map((r, i) => (
-                  <tr key={i}>
-                    <th scope="row">{r.critere}</th>
-                    <td>{r.logiciel}</td>
-                    <td>{r.services}</td>
+          <div className="matrix-editorial__card">
+            <div className="matrix-editorial__table-wrap">
+              <table className="matrix-editorial__table">
+                <thead>
+                  <tr>
+                    <th scope="col" className="matrix-col-critere">Critère clé</th>
+                    <th scope="col" className="matrix-col-solution">
+                      <span className="matrix-col-tag">Autonomie</span>
+                      <strong className="matrix-col-name">ORA Logiciel</strong>
+                    </th>
+                    <th scope="col" className="matrix-col-solution matrix-col-solution--featured">
+                      <span className="matrix-col-tag matrix-col-tag--emerald">Prise en main</span>
+                      <strong className="matrix-col-name">ORA Gestion déléguée</strong>
+                    </th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {comparisonRows.map((r, i) => (
+                    <tr key={i}>
+                      <th scope="row" className="matrix-cell-critere">
+                        {r.critere}
+                      </th>
+                      <td className="matrix-cell-content">
+                        {r.logiciel}
+                      </td>
+                      <td className="matrix-cell-content matrix-cell-content--featured">
+                        {r.services}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </section>

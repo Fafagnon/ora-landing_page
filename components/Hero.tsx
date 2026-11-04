@@ -46,7 +46,7 @@ export default function Hero() {
               textColor="#FFFFFF"
               radius={9999}
               thickness={1.5}
-              duration={3.5}
+              duration={7.5}
               glow={0.8}
               sparkle={true}
               className="hero-editorial__cta-star"
