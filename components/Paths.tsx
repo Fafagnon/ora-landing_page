@@ -47,8 +47,8 @@ export default function Paths() {
 
   return (
     <>
-      {/* Diptyque des Formules */}
-      <section id="formules" className="solutions" aria-labelledby="solutions-title">
+      {/* Diptyque des Formules : Solutions */}
+      <section id="solutions" className="solutions" aria-labelledby="solutions-title">
         <div className="wrap">
           <div className="section-meta">
             <span className="section-meta__num">Deux modèles d&apos;intervention</span>
@@ -140,8 +140,8 @@ export default function Paths() {
         </div>
       </section>
 
-      {/* Matrice Comparative Sobre */}
-      <section id="comparatif" className="matrix-section" aria-labelledby="matrix-title">
+      {/* Matrice Comparative & Tarifs */}
+      <section id="tarifs" className="matrix-section" aria-labelledby="matrix-title">
         <div className="wrap">
           <div className="section-meta">
             <span className="section-meta__num">Arbitrage objectif</span>

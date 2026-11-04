@@ -1,36 +1,141 @@
-import { site } from "@/lib/site.config";
+"use client";
+
+import { useState } from "react";
 
 export default function CtaBanner() {
-  const whatsappUrl = site.whatsapp
-    ? `https://wa.me/${site.whatsapp}?text=Bonjour%20ORA,%20je%20souhaite%20des%20renseignements%20sur%20vos%20solutions`
-    : "#contact";
+  const [submitted, setSubmitted] = useState(false);
+  const [country, setCountry] = useState("+228");
+  const [phone, setPhone] = useState("");
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [farmName, setFarmName] = useState("");
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setSubmitted(true);
+  };
 
   return (
-    <section id="contact" className="contact-section" aria-labelledby="contact-title">
+    <section id="contact" className="contact-form-section" aria-labelledby="form-heading">
       <div className="wrap">
-        <div className="contact-card">
-          <div>
-            <h2 id="contact-title">Échanger avec un conseiller ORA</h2>
-            <p className="lead" style={{ marginTop: 12 }}>
-              Que vous souhaitiez démarrer votre essai gratuit du logiciel ou évaluer la prise en charge complète de votre élevage au {site.countries}, notre équipe technique est disponible pour analyser vos besoins.
+        <div className="contact-form-card">
+          <div className="contact-form-header">
+            <h2 id="form-heading" className="contact-form-title">
+              Demander un essai gratuit
+            </h2>
+            <p className="contact-form-subtitle">
+              Remplissez ce formulaire, nous vous répondrons par e-mail ou par téléphone.
             </p>
           </div>
 
-          <div className="contact-actions">
-            <a className="btn btn-contact-light" href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-              Contacter sur WhatsApp
-            </a>
-            <a className="btn btn-contact-ghost" href="mailto:contact@ora-elevage.com">
-              Envoyer une demande par email
-            </a>
-          </div>
+          {submitted ? (
+            <div className="contact-form-success" role="status">
+              <div className="contact-form-success-icon" aria-hidden="true">✓</div>
+              <h3>Demande envoyée avec succès</h3>
+              <p>
+                Merci {fullName}. Notre conseiller d&apos;élevage au Togo et au Burkina Faso vous recontactera sous 24 heures ouvrées.
+              </p>
+            </div>
+          ) : (
+            <form className="contact-form" onSubmit={handleSubmit}>
+              {/* Nom complet */}
+              <div className="contact-form-group">
+                <label htmlFor="fullname" className="contact-form-label">
+                  Nom complet
+                </label>
+                <input
+                  id="fullname"
+                  type="text"
+                  required
+                  placeholder="Nom complet"
+                  value={fullName}
+                  onChange={(e) => setFullName(e.target.value)}
+                  className="contact-form-input"
+                />
+              </div>
 
-          <div className="contact-meta">
-            <span>{site.trial} sur le logiciel</span>
-            <span>·</span>
+              {/* Adresse e-mail */}
+              <div className="contact-form-group">
+                <label htmlFor="email" className="contact-form-label">
+                  Adresse e-mail
+                </label>
+                <input
+                  id="email"
+                  type="email"
+                  required
+                  placeholder="Adresse e-mail"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="contact-form-input"
+                />
+              </div>
+
+              {/* Téléphone */}
+              <div className="contact-form-group">
+                <label htmlFor="phone-number" className="contact-form-label">
+                  Téléphone
+                </label>
+                <div className="contact-form-phone-row">
+                  <select
+                    id="phone-country"
+                    aria-label="Choisir un pays"
+                    value={country}
+                    onChange={(e) => setCountry(e.target.value)}
+                    className="contact-form-select"
+                  >
+                    <option value="+228">Togo (+228)</option>
+                    <option value="+226">Burkina Faso (+226)</option>
+                    <option value="+225">Côte d&apos;Ivoire (+225)</option>
+                    <option value="+229">Bénin (+229)</option>
+                    <option value="+223">Mali (+223)</option>
+                    <option value="+221">Sénégal (+221)</option>
+                    <option value="+33">France (+33)</option>
+                    <option value="+1">Autre pays</option>
+                  </select>
+
+                  <input
+                    id="phone-number"
+                    type="tel"
+                    required
+                    placeholder="Numéro de téléphone"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                    className="contact-form-input contact-form-input--phone"
+                  />
+                </div>
+              </div>
+
+              {/* Nom de la ferme */}
+              <div className="contact-form-group">
+                <label htmlFor="farmname" className="contact-form-label">
+                  Nom de la ferme
+                </label>
+                <input
+                  id="farmname"
+                  type="text"
+                  required
+                  placeholder="Nom de la ferme"
+                  value={farmName}
+                  onChange={(e) => setFarmName(e.target.value)}
+                  className="contact-form-input"
+                />
+              </div>
+
+              {/* Bouton d'action */}
+              <div className="contact-form-submit-wrap">
+                <button type="submit" className="contact-form-submit">
+                  Envoyer ma demande
+                </button>
+              </div>
+            </form>
+          )}
+
+          <div className="contact-form-footer-meta">
+            <span>Essai 1 mois gratuit sur le logiciel</span>
+            <span className="contact-form-footer-sep" aria-hidden="true">·</span>
             <span>Sans engagement ni carte bancaire</span>
-            <span>·</span>
-            <span>Intervention technique au Togo et au Burkina Faso</span>
+            <span className="contact-form-footer-sep" aria-hidden="true">·</span>
+            <span>Conseillers disponibles au Togo et au Burkina Faso</span>
           </div>
         </div>
       </div>
