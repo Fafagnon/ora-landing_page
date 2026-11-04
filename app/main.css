@@ -1293,3 +1293,55 @@ h3 {
   }
 }
 
+
+
+/* ==========================================================================
+   Composants ReactBits : BlurText & SpotlightCard
+   ========================================================================== */
+
+/* BlurText : Révélation douce et progressive des titres */
+.blur-text {
+  display: inline;
+}
+
+.blur-text__word {
+  display: inline-block;
+  will-change: transform, filter, opacity;
+}
+
+/* SpotlightCard : Halo lumineux directionnel au survol du curseur */
+.spotlight-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background-color: var(--spotlight-card-surface, #FFFFFF);
+  box-shadow: var(--spotlight-card-shadow, 0 4px 20px -2px rgba(9, 33, 22, 0.04));
+}
+
+.spotlight-card__light {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.spotlight-card__edge {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  padding: 1px;
+  opacity: 0;
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+}
+
+.spotlight-card > *:not(.spotlight-card__light):not(.spotlight-card__edge) {
+  position: relative;
+  z-index: 2;
+}

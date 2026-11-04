@@ -1,4 +1,5 @@
 import { site } from "@/lib/site.config";
+import SpotlightCard from "@/components/SpotlightCard";
 
 export default function Paths() {
   const comparisonRows = [
@@ -51,7 +52,13 @@ export default function Paths() {
 
           <div className="solutions-cards-grid">
             {/* Carte 1 : ORA Logiciel */}
-            <article className="solution-card">
+            <SpotlightCard
+              as="article"
+              className="solution-card"
+              spotlightColor="#094C36"
+              intensity={0.25}
+              spotlightSize={360}
+            >
               <div className="solution-card__badge-row">
                 <span className="solution-card__pill">Autonomie de gestion</span>
                 <span className="solution-card__target">Pour l&apos;exploitant sur place</span>
@@ -101,10 +108,16 @@ export default function Paths() {
                   </svg>
                 </a>
               </div>
-            </article>
+            </SpotlightCard>
 
             {/* Carte 2 : ORA Gestion déléguée */}
-            <article className="solution-card solution-card--featured">
+            <SpotlightCard
+              as="article"
+              className="solution-card solution-card--featured"
+              spotlightColor="#094C36"
+              intensity={0.35}
+              spotlightSize={400}
+            >
               <div className="solution-card__badge-row">
                 <span className="solution-card__pill solution-card__pill--emerald">Prise en main totale</span>
                 <span className="solution-card__target">Pour la diaspora et non-résidents</span>
@@ -154,7 +167,7 @@ export default function Paths() {
                   </svg>
                 </a>
               </div>
-            </article>
+            </SpotlightCard>
           </div>
         </div>
       </section>

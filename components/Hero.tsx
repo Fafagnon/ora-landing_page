@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { site } from "@/lib/site.config";
 import StarBorder from "@/components/StarBorder";
+import BlurText from "@/components/BlurText";
 
 export default function Hero() {
   const whatsappUrl = site.whatsapp
@@ -26,9 +27,14 @@ export default function Hero() {
 
       <div className="wrap hero-editorial__wrap">
         <div className="hero-editorial__content">
-          {/* Titre éditorial noble */}
+          {/* Titre éditorial noble avec animation douce BlurText */}
           <h1 id="hero-heading" className="hero-editorial__title">
-            La référence en gestion et conseil pour votre élevage.
+            <BlurText
+              text="La référence en gestion et conseil pour votre élevage."
+              delay={75}
+              animateBy="words"
+              direction="bottom"
+            />
           </h1>
 
           {/* Paragraphe d'accroche centré */}
