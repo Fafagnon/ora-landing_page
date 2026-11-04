@@ -1,11 +1,10 @@
 import Image from "next/image";
 import { site } from "@/lib/site.config";
 import StarBorder from "@/components/StarBorder";
-import BlurText from "@/components/BlurText";
 
 export default function Hero() {
   const whatsappUrl = site.whatsapp
-    ? `https://wa.me/${site.whatsapp}?text=Bonjour%20ORA,%20je%20souhaite%20des%20renseignements%20sur%20vos%20solutions%20d%27%C3%A9levage`
+    ? `https://wa.me/${site.whatsapp}?text=Bonjour%20ORA,%20je%20souhaite%20des%20renseignements%20sur%20vos%20solutions%20d%27%C3%A9levage.`
     : "https://wa.me/?text=Bonjour%20ORA,%20je%20souhaite%20des%20renseignements";
 
   return (
@@ -27,14 +26,9 @@ export default function Hero() {
 
       <div className="wrap hero-editorial__wrap">
         <div className="hero-editorial__content">
-          {/* Titre éditorial noble avec animation douce BlurText */}
+          {/* Titre éditorial noble et lisible */}
           <h1 id="hero-heading" className="hero-editorial__title">
-            <BlurText
-              text="La référence en gestion et conseil pour votre élevage."
-              delay={75}
-              animateBy="words"
-              direction="bottom"
-            />
+            La référence en gestion et conseil pour votre élevage.
           </h1>
 
           {/* Paragraphe d'accroche centré */}

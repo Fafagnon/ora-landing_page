@@ -37,7 +37,7 @@ export default function Paths() {
 
   return (
     <>
-      {/* Section 1 : Deux modèles d'intervention */}
+      {/* Section 1 : Deux formules adaptées à votre réalité */}
       <section id="solutions" className="solutions-editorial" aria-labelledby="solutions-title">
         <div className="wrap">
           <div className="solutions-editorial__header">
@@ -88,25 +88,25 @@ export default function Paths() {
                   <svg className="solution-card__check" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span>Gestion des stocks d&apos;aliment, autonomie en jours et provenderie</span>
+                  <span>Gestion des stocks d&apos;aliment et autonomie en jours</span>
                 </li>
                 <li>
                   <svg className="solution-card__check" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span>Gestion des ventes, des dépenses et suivi de trésorerie</span>
+                  <span>Suivi des ventes, des dépenses et de la trésorerie</span>
                 </li>
                 <li>
                   <svg className="solution-card__check" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span>Gestion des employés (pointage de présence et calcul automatique des salaires)</span>
+                  <span>Pointage de présence des employés et calcul automatique des salaires</span>
                 </li>
                 <li>
                   <svg className="solution-card__check" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span>Gestion des équipements et alertes sanitaires du cheptel</span>
+                  <span>Suivi des équipements et alertes sanitaires du cheptel</span>
                 </li>
               </ul>
 
@@ -143,6 +143,7 @@ export default function Paths() {
                 <div className="solution-card__amount">
                   <span className="solution-card__figure">Sur devis</span>
                 </div>
+                <span className="solution-card__trial-badge">Accompagnement sur mesure</span>
               </div>
 
               <ul className="solution-card__keypoints">
@@ -150,19 +151,31 @@ export default function Paths() {
                   <svg className="solution-card__check solution-card__check--emerald" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span>Techniciens ORA expérimentés détachés sur votre exploitation</span>
+                  <span>Techniciens avicoles qualifiés détachés directement sur votre exploitation</span>
                 </li>
                 <li>
                   <svg className="solution-card__check solution-card__check--emerald" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span>Contrôle strict des intrants pour stopper le vol et le coulage</span>
+                  <span>Contrôle rigoureux des intrants et de la provenderie pour stopper les pertes</span>
                 </li>
                 <li>
                   <svg className="solution-card__check solution-card__check--emerald" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span>Bilans hebdomadaires chiffrés et photographies sur WhatsApp</span>
+                  <span>Suivi vétérinaire préventif et application stricte des protocoles sanitaires</span>
+                </li>
+                <li>
+                  <svg className="solution-card__check solution-card__check--emerald" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span>Bilans hebdomadaires détaillés et photographies d&apos;avancement sur WhatsApp</span>
+                </li>
+                <li>
+                  <svg className="solution-card__check solution-card__check--emerald" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span>Audit de fin de bande et analyse approfondie de la rentabilité financière</span>
                 </li>
               </ul>
 
