@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { site } from "@/lib/site.config";
 
 const navLinks = [
   { href: "#solutions", label: "Solutions" },
@@ -34,8 +35,12 @@ export default function Header() {
         </nav>
 
         <div className="header__cta">
-          <a className="header__btn" href="#contact">
-            Demander un essai
+          <a
+            className="header__btn"
+            href={site.appUrl || "#"}
+            aria-label="Se connecter à la plateforme ORA"
+          >
+            Se connecter
           </a>
         </div>
       </div>
