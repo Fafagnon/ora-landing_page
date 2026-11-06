@@ -31,9 +31,9 @@ export default function Hero() {
             La référence en gestion et conseil pour votre élevage.
           </h1>
 
-          {/* Paragraphe d'accroche centré */}
+          {/* Paragraphe d'accroche centré avec verbes d'action clés */}
           <p className="hero-editorial__lead">
-            Que vous soyez exploitant sur le terrain ou investisseur à distance, ORA structure vos opérations, élimine les pertes et assure le suivi rigoureux de votre ferme.
+            <strong>Suivez</strong> vos pontes, <strong>maîtrisez</strong> vos aliments, <strong>planifiez</strong> vos vaccins et <strong>sécurisez</strong> votre bénéfice net au FCFA. L&apos;outil tout-en-un conçu pour le terrain au Togo et au Burkina Faso.
           </p>
 
           {/* Double action : Bouton StarBorder principal + Bouton WhatsApp */}
@@ -86,6 +86,15 @@ export default function Hero() {
               </svg>
               <span>WhatsApp</span>
             </a>
+          </div>
+
+          {/* Ligne de réassurance sobre style Réa */}
+          <div className="hero-editorial__reassurance">
+            <span className="hero-editorial__reassurance-item">✓ 1 mois d&apos;essai offert</span>
+            <span className="hero-editorial__reassurance-sep" aria-hidden="true">·</span>
+            <span className="hero-editorial__reassurance-item">✓ Sans engagement ni carte bancaire</span>
+            <span className="hero-editorial__reassurance-sep" aria-hidden="true">·</span>
+            <span className="hero-editorial__reassurance-item">✓ Smartphone &amp; ordinateur</span>
           </div>
         </div>
       </div>

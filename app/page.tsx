@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import Piliers from "@/components/Piliers";
 import ValueProps from "@/components/ValueProps";
 import VideoSection from "@/components/VideoSection";
 import Paths from "@/components/Paths";
@@ -12,6 +13,7 @@ export default function Home() {
       <Header />
       <main id="contenu">
         <Hero />
+        <Piliers />
         <ValueProps />
         <VideoSection />
         <Paths />

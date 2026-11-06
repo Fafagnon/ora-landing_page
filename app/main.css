@@ -347,6 +347,30 @@ h4 {
   animation: heroFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.22s both;
 }
 
+.hero-editorial__reassurance {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 22px;
+  font-size: 0.85rem;
+  color: #262626;
+  font-weight: 500;
+  animation: heroFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+}
+
+.hero-editorial__reassurance-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.hero-editorial__reassurance-sep {
+  color: rgba(0, 0, 0, 0.25);
+  font-weight: 700;
+}
+
 /* Bouton StarBorder (ReactBits) */
 .star-border {
   position: relative;
@@ -499,6 +523,136 @@ h4 {
   .benefits-grid {
     grid-template-columns: 1fr;
     gap: 20px;
+  }
+}
+
+/* ==========================================================================
+   Section 5 Piliers Tout-en-Un (Style Réa-app Bento Grid)
+   ========================================================================== */
+.piliers-section {
+  padding: clamp(64px, 8vw, 104px) 0;
+  background: #F9FAF9;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.piliers-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 48px;
+}
+
+.piliers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.pilier-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  padding: clamp(24px, 3vw, 32px);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.03);
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.pilier-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px -4px rgba(0, 0, 0, 0.08);
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 992px) {
+  .pilier-card:nth-child(4) {
+    grid-column: span 1;
+  }
+  .pilier-card:nth-child(5) {
+    grid-column: span 2;
+  }
+}
+
+.pilier-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.pilier-card__icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: #F4F6F4;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pilier-card__badge {
+  font-family: var(--font-sans);
+  font-size: 0.725rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  background: rgba(0, 0, 0, 0.05);
+  color: #0A0A0A;
+}
+
+.pilier-card__title {
+  font-family: var(--font-sans);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0A0A0A;
+  margin: 0 0 10px;
+  letter-spacing: -0.015em;
+}
+
+.pilier-card__desc {
+  font-size: 0.925rem;
+  line-height: 1.55;
+  color: #262626;
+  margin: 0 0 20px;
+}
+
+.pilier-card__points {
+  list-style: none;
+  padding: 0;
+  margin: auto 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  padding-top: 16px;
+}
+
+.pilier-card__points li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.875rem;
+  line-height: 1.45;
+  color: #0A0A0A;
+}
+
+.pilier-card__check {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: #094C36;
+}
+
+@media (max-width: 900px) {
+  .piliers-grid {
+    grid-template-columns: 1fr;
+  }
+  .pilier-card:nth-child(5) {
+    grid-column: span 1;
   }
 }
 
