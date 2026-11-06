@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { site } from "@/lib/site.config";
-import StarBorder from "@/components/StarBorder";
 
 export default function Hero() {
   const whatsappUrl = site.whatsapp
@@ -9,48 +8,20 @@ export default function Hero() {
 
   return (
     <section className="hero-editorial" aria-labelledby="hero-heading">
-      {/* Arrière-plan panoramique avec brume et fondus atmosphériques */}
-      <div className="hero-editorial__backdrop" aria-hidden="true">
-        <Image
-          src="/hero-ora.jpg"
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className="hero-editorial__img"
-        />
-        <div className="hero-editorial__fade-top" />
-        <div className="hero-editorial__fade-bottom" />
-        <div className="hero-editorial__ambient-light" />
-      </div>
-
       <div className="wrap hero-editorial__wrap">
         <div className="hero-editorial__content">
-          {/* Titre éditorial noble et lisible */}
+          <span className="editorial-eyebrow">Togo et Burkina Faso</span>
+
           <h1 id="hero-heading" className="hero-editorial__title">
             La référence en gestion et conseil pour votre élevage.
           </h1>
 
-          {/* Paragraphe d'accroche centré */}
           <p className="hero-editorial__lead">
-            Que vous soyez exploitant sur le terrain ou investisseur à distance, ORA structure vos opérations, élimine les pertes et assure le suivi rigoureux de votre ferme.
+            Que vous soyez exploitant sur le terrain ou investisseur à distance, ORA structure vos opérations et assure le suivi rigoureux de votre ferme.
           </p>
 
-          {/* Double action : Bouton StarBorder principal + Bouton WhatsApp */}
           <div className="hero-editorial__actions">
-            <StarBorder
-              as="a"
-              href="#contact"
-              color="#F5B84B"
-              backgroundColor="#094C36"
-              textColor="#FFFFFF"
-              radius={9999}
-              thickness={1.5}
-              duration={7.5}
-              glow={0.8}
-              sparkle={true}
-              className="hero-editorial__cta-star"
-            >
+            <a className="hero-editorial__cta" href="#contact">
               <span>Demander un essai gratuit</span>
               <svg
                 width="16"
@@ -65,7 +36,7 @@ export default function Hero() {
               >
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
-            </StarBorder>
+            </a>
 
             <a
               className="hero-editorial__btn-whatsapp"
@@ -86,6 +57,31 @@ export default function Hero() {
               </svg>
               <span>WhatsApp</span>
             </a>
+          </div>
+
+          <p className="hero-editorial__proof">
+            <strong>{site.price} / mois</strong> · {site.trial}
+          </p>
+        </div>
+
+        {/* Visuel produit : captures de l'application en cascade */}
+        <div className="hero-editorial__visual" aria-hidden="true">
+          <div className="hero-shot">
+            <Image
+              src="/app/dashboard-cockpit.png"
+              alt=""
+              width={1100}
+              height={700}
+              priority
+            />
+          </div>
+          <div className="hero-shot hero-shot--small">
+            <Image
+              src="/app/equipe-pointage.png"
+              alt=""
+              width={1100}
+              height={700}
+            />
           </div>
         </div>
       </div>

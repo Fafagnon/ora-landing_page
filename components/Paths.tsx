@@ -25,7 +25,7 @@ export default function Paths() {
     {
       critere: "Connexion internet",
       logiciel: "Saisie des données journalières même hors ligne",
-      services: "Prise en charge intégrale sans dépendance",
+      services: "Aucune connexion requise de votre côté",
     },
     {
       critere: "Suivi des résultats",
@@ -69,7 +69,7 @@ export default function Paths() {
               <div className="solution-card__heading">
                 <h3 className="solution-card__title">ORA Logiciel</h3>
                 <p className="solution-card__pitch">
-                  Prenez le contrôle total de vos coûts, de la ponte et des stocks au quotidien.
+                  Suivez vos coûts, votre ponte et vos stocks au quotidien.
                 </p>
               </div>
 
@@ -139,7 +139,7 @@ export default function Paths() {
               <div className="solution-card__heading">
                 <h3 className="solution-card__title">ORA Gestion déléguée</h3>
                 <p className="solution-card__pitch">
-                  Confiez l&apos;exploitation à nos spécialistes sans subir le stress du terrain.
+                  Confiez l&apos;exploitation à nos spécialistes.
                 </p>
               </div>
 
@@ -167,7 +167,7 @@ export default function Paths() {
                   <svg className="solution-card__check solution-card__check--emerald" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span>Gestion stricte et rigoureuse de votre exploitation</span>
+                  <span>Gestion complète de votre exploitation</span>
                 </li>
               </ul>
 
@@ -192,7 +192,7 @@ export default function Paths() {
               Quelle formule choisir pour votre exploitation ?
             </h2>
             <p className="editorial-lead">
-              Un comparatif direct pour identifier en quelques secondes la solution adaptée à votre disponibilité et vos objectifs.
+              Un comparatif direct pour identifier la solution adaptée à votre disponibilité et à vos objectifs.
             </p>
           </div>
 

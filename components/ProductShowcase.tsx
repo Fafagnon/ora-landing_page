@@ -29,7 +29,7 @@ export default function ProductShowcase() {
       reverse: true,
     },
     {
-      category: "Exclusivité Ouest-Africaine",
+      category: "Provenderie",
       title: "Fabrication d'aliment et formulation sur mesure",
       desc: "En Afrique de l'Ouest, mélanger sa propre provende à la ferme permet de baisser les coûts de 20 à 30 %. ORA intègre un module de provenderie unique : enregistrez vos formules (maïs, tourteau de soja, son, coquilles, prémix) et laissez l'outil calculer les proportions exactes.",
       image: "/app/provenderie-formules.png",
@@ -44,7 +44,7 @@ export default function ProductShowcase() {
     {
       category: "Trésorerie & Marges",
       title: "Suivi rigoureux des ventes et des créances clients",
-      desc: "En aviculture, les revendeurs et demi-grossistes prennent fréquemment des plateaux d'œufs à crédit. ORA consigne chaque vente, les encaissements en espèces, les acomptes versés et le solde restant à recouvrer pour ne plus jamais égarer un paiement.",
+      desc: "En aviculture, les revendeurs et demi-grossistes prennent fréquemment des plateaux d'œufs à crédit. ORA consigne chaque vente, les encaissements en espèces, les acomptes versés et le solde restant à recouvrer pour suivre chaque paiement.",
       image: "/app/finances-creances.png",
       caption: "Finances · Ventes d'œufs, règlements en espèces et créances clients",
       points: [
