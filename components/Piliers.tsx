@@ -3,9 +3,9 @@ export default function Piliers() {
     {
       badge: "Production",
       title: "Ponte & Suivi du troupeau",
-      desc: "Saisie journalière au poulailler même sans connexion. Visualisez vos courbes de ponte et détectez immédiatement toute anomalie.",
+      desc: "Marche même hors ligne au poulailler. Vos données sont enregistrées localement et se synchronisent avec le cloud dès votre reconnexion.",
       points: [
-        "Saisie 100% hors ligne au bâtiment",
+        "Marche même hors ligne au poulailler",
         "Suivi du taux de ponte par bande",
         "Alerte précoce sur les mortalités",
       ],
