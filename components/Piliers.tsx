@@ -1,136 +1,79 @@
+const piliers = [
+  {
+    cat: "Production",
+    title: "Ponte et suivi du troupeau",
+    desc: "Saisissez vos données au poulailler, même sans connexion. Elles se synchronisent avec le cloud dès que vous retrouvez du réseau",
+    points: ["Taux de ponte par bande", "Alerte précoce sur les mortalités", "Suivi des équipements"],
+  },
+  {
+    cat: "Alimentation",
+    title: "Stocks et autonomie en jours",
+    desc: "Comparez la ration théorique à la consommation réelle pour repérer les pertes",
+    points: ["Consommation réelle par sujet", "Autonomie restante en jours", "Alerte de réapprovisionnement en provende"],
+  },
+  {
+    cat: "Sanitaire",
+    title: "Calendrier vaccinal et soins",
+    desc: "Générez le protocole prophylactique de votre cheptel et recevez une alerte avant chaque échéance",
+    points: ["Rappels Newcastle, Gumboro et autres vaccins", "Traçabilité des traitements vétérinaires"],
+  },
+  {
+    cat: "Ressources humaines",
+    title: "Pointage et paie des ouvriers",
+    desc: "Suivez la présence de vos ouvriers chaque jour et calculez salaires et avances",
+    points: ["Pointage journalier des présences", "Salaires et avances calculés automatiquement", "Historique par employé"],
+  },
+  {
+    cat: "Finances",
+    title: "Trésorerie et marge nette en FCFA",
+    desc: "Centralisez les ventes d'œufs et de poulets et les achats d'intrants pour connaître votre bénéfice net",
+    points: ["Recettes et dépenses", "Coût de revient par sujet ou par plateau", "Bénéfice net consolidé en FCFA"],
+  },
+];
+
 export default function Piliers() {
-  const piliers = [
-    {
-      badge: "Production",
-      title: "Ponte & Suivi du troupeau",
-      desc: "Marche même hors ligne au poulailler. Vos données sont enregistrées localement et se synchronisent avec le cloud dès votre reconnexion.",
-      points: [
-        "Marche même hors ligne au poulailler",
-        "Suivi du taux de ponte par bande",
-        "Alerte précoce sur les mortalités",
-      ],
-      icon: (
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#094C36" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-          <path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z" />
-          <path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
-          <path d="M12 2v2" />
-          <path d="M12 20v2" />
-          <path d="m4.93 4.93 1.41 1.41" />
-          <path d="m17.66 17.66 1.41 1.41" />
-        </svg>
-      ),
-    },
-    {
-      badge: "Alimentation",
-      title: "Stocks & Autonomie en jours",
-      desc: "L'aliment pèse 70% de vos dépenses. Comparez la ration théorique à la consommation réelle pour stopper net les pertes.",
-      points: [
-        "Consommation réelle par sujet",
-        "Autonomie restante calculée en jours",
-        "Alerte réapprovisionnement provende",
-      ],
-      icon: (
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#094C36" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-          <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
-          <path d="M3 6h18" />
-          <path d="M16 10a4 4 0 0 1-8 0" />
-        </svg>
-      ),
-    },
-    {
-      badge: "Sanitaire",
-      title: "Calendrier vaccinal & Soins",
-      desc: "Générez automatiquement le protocole prophylactique de votre cheptel et recevez des alertes avant chaque échéance critique.",
-      points: [
-        "Rappels Newcastle, Gumboro & vaccins",
-        "Traçabilité des traitements vétérinaires",
-        "Prévention des épidémies dévastatrices",
-      ],
-      icon: (
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#094C36" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-          <path d="m18 2 4 4" />
-          <path d="m17 7 3-3" />
-          <path d="M19 9 8.7 19.3c-.4.4-1 .6-1.6.6H3v-4.1c0-.6.2-1.2.6-1.6L14 3.9" />
-          <path d="m9 11 4 4" />
-          <path d="m5 19-3 3" />
-        </svg>
-      ),
-    },
-    {
-      badge: "Ressources humaines",
-      title: "Pointage & Paie ouvriers",
-      desc: "Suivez la présence de vos ouvriers agricoles au quotidien et calculez automatiquement les salaires sans erreurs ni litiges.",
-      points: [
-        "Pointage journalier des présences",
-        "Calcul automatisé des salaires et avances",
-        "Historique clair pour chaque employé",
-      ],
-      icon: (
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#094C36" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-          <circle cx="9" cy="7" r="4" />
-          <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-          <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-        </svg>
-      ),
-    },
-    {
-      badge: "Finances",
-      title: "Trésorerie & Marge nette en FCFA",
-      desc: "Centralisez les ventes d'œufs, de poulets et les achats d'intrants. Connaissez votre bénéfice net réel au centime près.",
-      points: [
-        "Suivi des recettes et des dépenses",
-        "Coût de revient exact par sujet ou plateau",
-        "Bénéfice net consolidé en FCFA",
-      ],
-      icon: (
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#094C36" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-          <line x1="12" y1="1" x2="12" y2="23" />
-          <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-        </svg>
-      ),
-    },
-  ];
-
   return (
-    <section id="piliers" className="piliers-section" aria-labelledby="piliers-title">
+    <section id="logiciel" className="section" aria-labelledby="logiciel-title">
       <div className="wrap">
-        <div className="piliers-header">
-          <span className="editorial-eyebrow">Une solution tout-en-un</span>
-          <h2 id="piliers-title" className="editorial-section-title">
-            Une seule solution pour les 5 piliers de votre élevage
-          </h2>
-          <p className="editorial-lead">
-            Du poulailler au bilan financier, ORA regroupe l&apos;intégralité de vos opérations sans multiplier les carnets ni les feuilles de calcul.
-          </p>
+        <div className="split">
+          <div className="split__text">
+            <p className="eyebrow">Pour l&apos;éleveur sur place</p>
+            <h2 id="logiciel-title" className="h2">Le logiciel pour suivre votre ferme vous-même</h2>
+            <p className="lead">
+              Du poulailler au bilan financier, ORA regroupe vos opérations au même endroit, sans carnets ni feuilles de calcul.
+            </p>
+          </div>
+          <div className="split__visual">
+            <img
+              src="/illustrations/ora-logiciel.svg"
+              width={730}
+              height={380}
+              alt="Un éleveur devant son poulailler suit la ponte sur son téléphone, près d'un plateau d'œufs"
+              loading="lazy"
+            />
+          </div>
         </div>
 
-        <div className="piliers-grid">
-          {piliers.map((p, idx) => (
-            <article key={idx} className={`pilier-card ${idx >= 3 ? "pilier-card--wide" : ""}`}>
-              <div className="pilier-card__top">
-                <div className="pilier-card__icon-box">{p.icon}</div>
-                <span className="pilier-card__badge">{p.badge}</span>
+        <ol className="registre" aria-label="Les cinq piliers du logiciel">
+          {piliers.map((p, i) => (
+            <li key={p.title} className="registre__row">
+              <span className="registre__num">{String(i + 1).padStart(2, "0")}</span>
+              <div className="registre__head">
+                <span className="registre__cat">{p.cat}</span>
+                <h3 className="registre__title">{p.title}</h3>
               </div>
-
-              <h3 className="pilier-card__title">{p.title}</h3>
-              <p className="pilier-card__desc">{p.desc}</p>
-
-              <ul className="pilier-card__points">
-                {p.points.map((pt, pIdx) => (
-                  <li key={pIdx}>
-                    <svg className="pilier-card__check" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" clipRule="evenodd" />
-                    </svg>
-                    <span>{pt}</span>
-                  </li>
-                ))}
-              </ul>
-            </article>
+              <div className="registre__body">
+                <p className="registre__desc">{p.desc}</p>
+                <ul className="points">
+                  {p.points.map((pt) => (
+                    <li key={pt}>{pt}</li>
+                  ))}
+                </ul>
+              </div>
+            </li>
           ))}
-        </div>
+        </ol>
       </div>
     </section>
   );
 }
-

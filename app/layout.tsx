@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import "@fontsource-variable/outfit";
+import "@fontsource-variable/newsreader";
 import "@fontsource-variable/figtree";
 import "./main.css";
 
