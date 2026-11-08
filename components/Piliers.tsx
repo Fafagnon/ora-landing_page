@@ -37,22 +37,23 @@ export default function Piliers() {
       <div className="wrap">
         <div className="split">
           <div className="split__text">
-            <p className="eyebrow">Pour l&apos;éleveur sur place</p>
             <h2 id="logiciel-title" className="h2">Le logiciel pour suivre votre ferme vous-même</h2>
             <p className="lead">
               Du poulailler au bilan financier, ORA regroupe vos opérations au même endroit, sans carnets ni feuilles de calcul.
             </p>
           </div>
           <div className="split__visual">
-            <div className="dashboard-frame">
-              <img
-                src="/app/dashboard-cockpit-clean.png"
-                width={1110}
-                height={1177}
-                alt="Tableau de bord ORA affichant les courbes de ponte, alertes de stock d'aliment et indicateurs d'élevage"
-                loading="lazy"
-                className="dashboard-frame__img"
-              />
+            <div className="tablet-mockup">
+              <div className="tablet-mockup__camera" aria-hidden="true" />
+              <div className="tablet-mockup__screen">
+                <img
+                  src="/app/dashboard-cockpit-clean.png"
+                  width={1110}
+                  height={1177}
+                  alt="Tableau de bord ORA affichant les courbes de ponte, alertes de stock d'aliment et indicateurs d'élevage"
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
         </div>

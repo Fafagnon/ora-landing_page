@@ -375,25 +375,51 @@ select {
   width: 100%;
 }
 
-/* Cadre sobre du tableau de bord */
-.dashboard-frame {
+/* Mockup Tablette épuré pour le tableau de bord */
+.tablet-mockup {
   position: relative;
+  background: #191613;
+  border-radius: 22px;
+  padding: 10px 10px 12px 10px;
+  box-shadow:
+    0 22px 48px -12px rgba(31, 27, 22, 0.2),
+    0 4px 12px rgba(31, 27, 22, 0.08),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+  transition: transform 240ms var(--ease), box-shadow 240ms var(--ease);
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.tablet-mockup:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 28px 56px -12px rgba(31, 27, 22, 0.25),
+    0 6px 16px rgba(31, 27, 22, 0.1),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.18);
+}
+
+.tablet-mockup__camera {
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.28);
+  border-radius: 50%;
+  margin: 0 auto 6px;
+}
+
+.tablet-mockup__screen {
+  position: relative;
+  background: #ffffff;
   border-radius: 12px;
   overflow: hidden;
-  border: 1px solid var(--rule);
-  background: #ffffff;
-  box-shadow: 0 16px 36px -8px rgba(31, 27, 22, 0.08), 0 2px 6px rgba(31, 27, 22, 0.04);
-  transition: transform 200ms var(--ease), box-shadow 200ms var(--ease);
+  aspect-ratio: 16 / 11;
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
-.dashboard-frame:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 20px 44px -8px rgba(31, 27, 22, 0.12);
-}
-
-.dashboard-frame__img {
+.tablet-mockup__screen img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: top left;
   display: block;
 }
 
@@ -475,19 +501,28 @@ select {
   font-weight: 500;
 }
 
+.hero__actions {
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+@media (max-width: 480px) {
+  .hero__actions .btn {
+    width: 100%;
+  }
+}
+
 .hero__meta {
-  margin-top: 20px;
+  margin-top: 14px;
   display: flex;
   flex-wrap: wrap;
   gap: 4px 18px;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 20px;
   color: var(--ink-3);
-}
-
-.hero__meta a {
-  color: var(--ink);
-  text-underline-offset: 3px;
 }
 
 .hero__visual img {

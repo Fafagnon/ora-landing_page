@@ -1,3 +1,5 @@
+"use client";
+
 import { site } from "@/lib/site.config";
 
 const lignes = [
@@ -28,7 +30,17 @@ export default function Tarifs() {
               <span className="price__unit">/ mois</span>
             </p>
             <p className="price__note">1 mois d&apos;essai offert</p>
-            <a className="btn btn--primary" href="#contact">Démarrer l&apos;essai gratuit</a>
+            <a
+              className="btn btn--primary"
+              href="#contact"
+              onClick={() => {
+                if (typeof window !== "undefined") {
+                  window.dispatchEvent(new CustomEvent("ora:select-formule", { detail: "logiciel" }));
+                }
+              }}
+            >
+              Démarrer l&apos;essai gratuit
+            </a>
           </div>
           <div className="price">
             <p className="price__name">Gestion déléguée</p>
@@ -36,7 +48,17 @@ export default function Tarifs() {
               <span className="price__figure">Sur devis</span>
             </p>
             <p className="price__note">Accompagnement sur mesure</p>
-            <a className="btn btn--secondary" href="#contact">Demander un diagnostic de ferme</a>
+            <a
+              className="btn btn--secondary"
+              href="#contact"
+              onClick={() => {
+                if (typeof window !== "undefined") {
+                  window.dispatchEvent(new CustomEvent("ora:select-formule", { detail: "gestion" }));
+                }
+              }}
+            >
+              Demander un diagnostic de ferme
+            </a>
           </div>
         </div>
 

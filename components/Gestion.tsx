@@ -1,3 +1,5 @@
+"use client";
+
 const lignes = [
   { quand: "Sur place", texte: "Techniciens avicoles qualifiés détachés directement sur votre exploitation" },
   { quand: "Chaque semaine", texte: "Bilan détaillé avec photos, envoyé sur WhatsApp" },
@@ -19,7 +21,6 @@ export default function Gestion() {
             />
           </div>
           <div className="split__text">
-            <p className="eyebrow">Pour qui n&apos;est pas sur place</p>
             <h2 id="gestion-title" className="h2">Vous n&apos;êtes pas sur place, nos techniciens le sont</h2>
             <p className="lead">
               ORA gère votre ferme à votre place. Nos techniciens travaillent avec le logiciel ORA et vous envoient le bilan chaque semaine.
@@ -34,7 +35,17 @@ export default function Gestion() {
               ))}
             </dl>
 
-            <a className="btn btn--primary" href="#contact">Demander un diagnostic de ferme</a>
+            <a
+              className="btn btn--primary"
+              href="#contact"
+              onClick={() => {
+                if (typeof window !== "undefined") {
+                  window.dispatchEvent(new CustomEvent("ora:select-formule", { detail: "gestion" }));
+                }
+              }}
+            >
+              Demander un diagnostic de ferme
+            </a>
           </div>
         </div>
       </div>

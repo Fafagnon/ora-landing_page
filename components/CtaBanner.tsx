@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function CtaBanner() {
   const [submitted, setSubmitted] = useState(false);
@@ -11,6 +11,29 @@ export default function CtaBanner() {
   const [email, setEmail] = useState("");
   const [farmName, setFarmName] = useState("");
 
+  useEffect(() => {
+    const handleSelect = (e: Event) => {
+      const custom = e as CustomEvent<string>;
+      if (custom.detail === "logiciel" || custom.detail === "gestion") {
+        setFormule(custom.detail);
+      }
+    };
+    window.addEventListener("ora:select-formule", handleSelect);
+
+    const checkHash = () => {
+      const hash = window.location.hash;
+      if (hash.includes("formule=logiciel")) setFormule("logiciel");
+      if (hash.includes("formule=gestion")) setFormule("gestion");
+    };
+    checkHash();
+    window.addEventListener("hashchange", checkHash);
+
+    return () => {
+      window.removeEventListener("ora:select-formule", handleSelect);
+      window.removeEventListener("hashchange", checkHash);
+    };
+  }, []);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitted(true);
@@ -19,28 +42,8 @@ export default function CtaBanner() {
   return (
     <section id="contact" className="section section--band" aria-labelledby="form-heading">
       <div className="wrap">
-        <div className="split split--reverse">
-          {/* Colonne visuelle : Illustration de l'éleveur avec texte rassurant */}
-          <div className="split__visual">
-            <img
-              src="/illustrations/ora-logiciel.svg"
-              width={730}
-              height={380}
-              alt="Un éleveur devant son poulailler suit la ponte sur son téléphone, près d'un plateau d'œufs"
-              loading="lazy"
-            />
-            <div className="contact-aside">
-              <p className="eyebrow" style={{ marginTop: 24 }}>Prise en main immédiate</p>
-              <h3 className="h3" style={{ fontSize: 24, lineHeight: "30px", fontFamily: "var(--font-display)", fontWeight: 400 }}>
-                Un accompagnement dédié dès votre premier jour
-              </h3>
-              <p className="lead" style={{ fontSize: 16, lineHeight: "24px", marginTop: 12 }}>
-                Que vous choisissiez d&apos;utiliser le logiciel ORA en autonomie ou de confier votre élevage à nos techniciens, notre équipe vous aide à structurer vos opérations sans interruption d&apos;activité.
-              </p>
-            </div>
-          </div>
-
-          {/* Colonne formulaire */}
+        <div className="split">
+          {/* Colonne 1 : Formulaire en premier */}
           <div className="form-card">
             <h2 id="form-heading" className="h2 h2--sm">Demander un essai ou un diagnostic</h2>
             <p className="form-card__sub">
@@ -115,6 +118,25 @@ export default function CtaBanner() {
               <span>1 mois d&apos;essai offert</span>
               <span>Sans engagement ni carte bancaire</span>
             </p>
+          </div>
+
+          {/* Colonne 2 : Visuel et accompagnement en second */}
+          <div className="split__visual">
+            <img
+              src="/illustrations/ora-logiciel.svg"
+              width={730}
+              height={380}
+              alt="Un éleveur devant son poulailler suit la ponte sur son téléphone, près d'un plateau d'œufs"
+              loading="lazy"
+            />
+            <div className="contact-aside">
+              <h3 className="h3" style={{ fontSize: 24, lineHeight: "30px", fontFamily: "var(--font-display)", fontWeight: 400, marginTop: 24 }}>
+                Un accompagnement dédié dès votre premier jour
+              </h3>
+              <p className="lead" style={{ fontSize: 16, lineHeight: "24px", marginTop: 12 }}>
+                Que vous choisissiez d&apos;utiliser le logiciel ORA en autonomie ou de confier votre élevage à nos techniciens, notre équipe vous aide à structurer vos opérations sans interruption d&apos;activité.
+              </p>
+            </div>
           </div>
         </div>
       </div>
