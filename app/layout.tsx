@@ -4,12 +4,12 @@ import "@fontsource-variable/figtree";
 import "./main.css";
 
 export const metadata: Metadata = {
-  title: "ORA : Logiciel et gestion d'élevage au Togo et au Burkina Faso",
+  title: "ORA : Logiciel et gestion d'élevage avicole en Afrique",
   description:
-    "Gérez votre élevage vous-même avec le logiciel ORA, utilisable même sans internet, ou confiez-le aux équipes ORA. 1 mois d'essai gratuit.",
+    "Gérez votre élevage vous-même avec le logiciel ORA, utilisable même sans internet, ou confiez-le aux équipes ORA en Afrique. 1 mois d'essai gratuit.",
   openGraph: {
-    title: "ORA : Votre élevage, suivi au jour le jour",
-    description: "Logiciel de suivi d'élevage et gestion déléguée.",
+    title: "ORA : Votre élevage, suivi au jour le jour en Afrique",
+    description: "Logiciel de suivi d'élevage et gestion déléguée en Afrique.",
     locale: "fr_FR",
     type: "website",
   },

@@ -13,7 +13,7 @@ export default function Hero() {
 
           <p className="hero__lead rise" style={{ ["--i" as string]: 1 }}>
             ORA est un logiciel pour suivre vous-même vos pontes, vos aliments et vos vaccins, et un cabinet
-            qui gère votre ferme à votre place avec ce même logiciel. Au Togo et au Burkina Faso.
+            qui gère votre ferme à votre place avec ce même logiciel. En Afrique.
           </p>
 
           <div className="hero__fork rise" style={{ ["--i" as string]: 2 }}>

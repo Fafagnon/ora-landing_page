@@ -13,7 +13,7 @@ export default function Footer() {
               <Image src="/logo-ora.png" alt="ORA" width={92} height={40} className="footer__logo" />
             </a>
             <p>
-              Cabinet de conseil et de gestion d&apos;élevage au Togo et au Burkina Faso. Logiciel de suivi et gestion déléguée pour exploitations avicoles et agricoles.
+              Cabinet de conseil et de gestion d&apos;élevage en Afrique. Logiciel de suivi et gestion déléguée pour exploitations avicoles et agricoles.
             </p>
           </div>
 

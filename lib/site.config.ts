@@ -3,7 +3,7 @@ export const site = {
   name: "ORA",
   price: "5 000 F CFA",
   trial: "1 mois d'essai gratuit",
-  countries: "Togo et Burkina Faso",
+  countries: "Afrique",
   appUrl: "", // Lien vers le logiciel (à brancher ultérieurement)
   whatsapp: "22899324636", // WhatsApp principal (Togo)
   phoneTogo: "+228 99 32 46 36",
