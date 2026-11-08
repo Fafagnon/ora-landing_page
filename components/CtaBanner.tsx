@@ -73,6 +73,9 @@ export default function CtaBanner() {
         email: mail,
         phone: fullPhone,
         farm_name: farm,
+        // Colonne ajoutée par la migration 20261108_trial_requests_formule
+        // (à exécuter avant le merge, sinon l'envoi échoue).
+        formule,
       });
       if (insertErr) throw insertErr;
       setSubmitted(true);
