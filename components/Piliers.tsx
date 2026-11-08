@@ -44,13 +44,16 @@ export default function Piliers() {
             </p>
           </div>
           <div className="split__visual">
-            <img
-              src="/illustrations/ora-logiciel.svg"
-              width={730}
-              height={380}
-              alt="Un éleveur devant son poulailler suit la ponte sur son téléphone, près d'un plateau d'œufs"
-              loading="lazy"
-            />
+            <div className="dashboard-frame">
+              <img
+                src="/app/dashboard-cockpit-clean.png"
+                width={1110}
+                height={1177}
+                alt="Tableau de bord ORA affichant les courbes de ponte, alertes de stock d'aliment et indicateurs d'élevage"
+                loading="lazy"
+                className="dashboard-frame__img"
+              />
+            </div>
           </div>
         </div>
 
