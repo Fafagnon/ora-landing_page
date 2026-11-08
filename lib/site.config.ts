@@ -4,7 +4,7 @@ export const site = {
   price: "5 000 F CFA",
   trial: "1 mois d'essai gratuit",
   countries: "Afrique",
-  appUrl: "", // Lien vers le logiciel (à brancher ultérieurement)
+  appUrl: "https://izifarm.vercel.app/auth", // Lien vers le logiciel (page de connexion)
   whatsapp: "22899324636", // WhatsApp principal (Togo)
   whatsappBurkina: "22644265129", // WhatsApp Burkina (+226 44 26 51 29)
   phoneTogo: "+228 99 32 46 36",

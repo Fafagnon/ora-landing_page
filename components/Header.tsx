@@ -27,7 +27,7 @@ export default function Header() {
         </nav>
 
         <div className="header__actions">
-          <a className="btn btn--secondary btn--sm" href="#">Se connecter</a>
+          <a className="btn btn--primary btn--sm" href={site.appUrl}>Se connecter</a>
 
           <details className="menu">
             <summary className="menu__toggle">Menu</summary>
