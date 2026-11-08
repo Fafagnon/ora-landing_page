@@ -1,9 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { supabase } from "@/lib/supabase";
 
 export default function CtaBanner() {
   const [submitted, setSubmitted] = useState(false);
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [formule, setFormule] = useState("");
   const [country, setCountry] = useState("");
   const [phone, setPhone] = useState("");
@@ -34,9 +37,58 @@ export default function CtaBanner() {
     };
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // Demande d'essai : aucun compte n'est créé, juste une ligne en attente
+  // dans trial_requests (la même table que le formulaire de l'appli),
+  // que le super admin approuvera dans /admin (puis invitation par e-mail).
+  // Le succès ne s'affiche que si l'insertion a vraiment réussi.
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setError(null);
+
+    const name = fullName.trim();
+    const mail = email.trim().toLowerCase();
+    const farm = farmName.trim();
+    const digits = phone.replace(/[\s-]/g, "").trim();
+    if (!name || !mail || !mail.includes("@") || !digits || !farm) {
+      setError("Veuillez remplir tous les champs : nom, e-mail, téléphone et ferme.");
+      return;
+    }
+    if (!digits.startsWith("+") && !country) {
+      setError("Veuillez choisir l'indicatif de votre pays.");
+      return;
+    }
+    // Numéro international : indicatif choisi + numéro saisi, sauf si le
+    // numéro saisi contient déjà son indicatif (il commence par +).
+    const fullPhone = digits.startsWith("+") ? digits : `${country}${digits}`;
+
+    if (!supabase) {
+      setError("La demande n'a pas pu être envoyée. Réessayez.");
+      return;
+    }
+
+    setBusy(true);
+    try {
+      const { error: insertErr } = await supabase.from("trial_requests").insert({
+        full_name: name,
+        email: mail,
+        phone: fullPhone,
+        farm_name: farm,
+      });
+      if (insertErr) throw insertErr;
+      setSubmitted(true);
+    } catch (err) {
+      const code = (err as { code?: string }).code;
+      const message = (err as { message?: string }).message ?? "";
+      if (code === "23505" || message.includes("duplicate")) {
+        // Message identique à un envoi réussi : on ne révèle pas qu'une
+        // demande est déjà en attente pour cet e-mail.
+        setSubmitted(true);
+      } else {
+        setError("La demande n'a pas pu être envoyée. Réessayez.");
+      }
+    } finally {
+      setBusy(false);
+    }
   };
 
   return (
@@ -110,7 +162,15 @@ export default function CtaBanner() {
                   <input id="farmname" type="text" required value={farmName} onChange={(e) => setFarmName(e.target.value)} />
                 </div>
 
-                <button type="submit" className="btn btn--primary btn--block">Envoyer ma demande</button>
+                <button type="submit" className="btn btn--primary btn--block" disabled={busy}>
+                  {busy ? "Envoi en cours…" : "Envoyer ma demande"}
+                </button>
+
+                {error && (
+                  <p className="form-error" role="alert">
+                    {error}
+                  </p>
+                )}
               </form>
             )}
 
