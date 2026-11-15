@@ -395,6 +395,14 @@ select {
   align-items: center;
 }
 
+/* Sur mobile, le titre des Services passe avant son illustration :
+   sinon les deux illustrations (hero puis Services) se suivent. */
+@media (max-width: 959px) {
+  #services .split__text {
+    order: -1;
+  }
+}
+
 .split__visual img {
   width: 100%;
 }
