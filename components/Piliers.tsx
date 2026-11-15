@@ -77,6 +77,39 @@ export default function Piliers() {
             </li>
           ))}
         </ol>
+
+        <div className="shot-strip">
+          <figure className="shot-strip__item">
+            <div className="tablet-mockup">
+              <div className="tablet-mockup__camera" aria-hidden="true" />
+              <div className="tablet-mockup__screen">
+                <img
+                  src="/app/stocks-autonomie-clean.png"
+                  width={1110}
+                  height={1073}
+                  alt="Écran Stocks d'ORA Groupe : autonomie en jours, plateaux d'œufs et alertes de réapprovisionnement"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <figcaption>Stocks et autonomie en jours</figcaption>
+          </figure>
+          <figure className="shot-strip__item">
+            <div className="tablet-mockup">
+              <div className="tablet-mockup__camera" aria-hidden="true" />
+              <div className="tablet-mockup__screen">
+                <img
+                  src="/app/equipe-pointage-clean.png"
+                  width={1110}
+                  height={759}
+                  alt="Écran Pointage d'ORA Groupe : présences du jour, arrivées, pauses et départs des ouvriers"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <figcaption>Pointage du jour</figcaption>
+          </figure>
+        </div>
       </div>
     </section>
   );
