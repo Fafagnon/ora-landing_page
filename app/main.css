@@ -997,11 +997,13 @@ select {
 .form {
   margin-top: 32px;
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 20px;
 }
 
 .field {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 8px;
 }
 
@@ -1013,6 +1015,7 @@ select {
 
 .field input,
 .field select {
+  min-width: 0;
   height: 44px;
   padding: 0 12px;
   border: 1px solid rgba(31, 27, 22, 0.24);
