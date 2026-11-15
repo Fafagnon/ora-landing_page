@@ -100,7 +100,7 @@ export default function CtaBanner() {
         <div className="split">
           {/* Colonne 1 : Formulaire en premier */}
           <div className="form-card">
-            <h2 id="form-heading" className="h2 h2--sm">Demander un essai ou un diagnostic</h2>
+            <h2 id="form-heading" className="h2 h2--sm">Demander un essai ou un service</h2>
             <p className="form-card__sub">
               Remplissez le formulaire, nous vous répondrons par e-mail ou par téléphone sous 24 heures ouvrées.
             </p>
@@ -108,7 +108,7 @@ export default function CtaBanner() {
             {submitted ? (
               <div className="form-success" role="status">
                 <h3>Demande envoyée</h3>
-                <p>Merci {fullName}. Un conseiller ORA Groupe vous recontactera sous 24 heures ouvrées concernant votre demande ({formule === "gestion" ? "Gestion déléguée" : "Logiciel ORA Groupe"}).</p>
+                <p>Merci {fullName}. Un conseiller ORA Groupe vous recontactera sous 24 heures ouvrées concernant votre demande ({formule === "gestion" ? "Demande de service" : "Logiciel ORA Groupe"}).</p>
               </div>
             ) : (
               <form className="form" onSubmit={handleSubmit}>
@@ -122,7 +122,7 @@ export default function CtaBanner() {
                   >
                     <option value="" disabled>Sélectionnez une formule</option>
                     <option value="logiciel">Logiciel ORA Groupe (autonomie sur place)</option>
-                    <option value="gestion">Gestion déléguée (techniciens ORA Groupe sur place)</option>
+                    <option value="gestion">Demande de service (conseil, études, gestion, formation)</option>
                   </select>
                 </div>
 
@@ -161,7 +161,7 @@ export default function CtaBanner() {
                 </div>
 
                 <div className="field">
-                  <label htmlFor="farmname">Nom de la ferme</label>
+                  <label htmlFor="farmname">Nom de la ferme ou du projet</label>
                   <input id="farmname" type="text" required value={farmName} onChange={(e) => setFarmName(e.target.value)} />
                 </div>
 
@@ -197,7 +197,7 @@ export default function CtaBanner() {
                 Un accompagnement dédié dès votre premier jour
               </h3>
               <p className="lead" style={{ fontSize: 16, lineHeight: "24px", marginTop: 12 }}>
-                Que vous choisissiez d&apos;utiliser le logiciel ORA Groupe en autonomie ou de confier votre élevage à nos techniciens, notre équipe vous aide à structurer vos opérations sans interruption d&apos;activité.
+                Que vous choisissiez d&apos;utiliser le logiciel ORA Groupe en autonomie ou de confier votre projet à nos équipes, nous vous aidons à structurer vos opérations sans interruption d&apos;activité.
               </p>
             </div>
           </div>

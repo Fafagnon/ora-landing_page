@@ -2,8 +2,8 @@ import Image from "next/image";
 import { site } from "@/lib/site.config";
 
 const navLinks = [
+  { href: "#services", label: "Services" },
   { href: "#logiciel", label: "Logiciel" },
-  { href: "#gestion", label: "Gestion déléguée" },
   { href: "#tarifs", label: "Tarifs" },
   { href: "#contact", label: "Contact" },
 ];

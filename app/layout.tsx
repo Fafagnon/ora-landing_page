@@ -4,11 +4,11 @@ import "@fontsource-variable/figtree";
 import "./main.css";
 
 export const metadata: Metadata = {
-  title: "ORA Groupe : Logiciel et gestion d'élevage avicole en Afrique",
+  title: "ORA Groupe : Gestion de projets agricoles et logiciel de suivi d'élevage",
   description:
-    "Gérez votre élevage vous-même avec le logiciel ORA Groupe, utilisable même sans internet, ou confiez-le aux équipes ORA Groupe en Afrique. 1 mois d'essai gratuit.",
+    "ORA Groupe étudie, aménage et gère votre projet agricole. Son logiciel de suivi d'élevage, utilisé par ses techniciens sur le terrain, est aussi disponible en abonnement. 1 mois d'essai gratuit.",
   openGraph: {
-    title: "ORA Groupe : Votre élevage, suivi au jour le jour en Afrique",
+    title: "ORA Groupe : Votre projet agricole, notre expertise",
     description: "Logiciel de suivi d'élevage et gestion déléguée en Afrique.",
     locale: "fr_FR",
     type: "website",
