@@ -370,6 +370,18 @@ select {
   margin-top: 40px;
 }
 
+/* ---------- Interlude illustré entre deux sections ---------- */
+.interlude {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.interlude img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .split {
   display: grid;
   gap: 40px;
