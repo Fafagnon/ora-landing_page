@@ -160,7 +160,7 @@ select {
 }
 
 .btn--sm {
-  height: 36px;
+  height: 44px;
   padding: 0 16px;
   font-size: 15px;
 }
@@ -262,7 +262,7 @@ select {
 .menu__toggle {
   display: flex;
   align-items: center;
-  height: 36px;
+  height: 44px;
   padding: 0 12px;
   cursor: pointer;
   list-style: none;
@@ -279,7 +279,7 @@ select {
 .menu__list {
   position: absolute;
   right: 0;
-  top: 44px;
+  top: 52px;
   width: 240px;
   padding: 8px;
   background: var(--surface);
@@ -290,7 +290,7 @@ select {
 
 .menu__link {
   display: block;
-  padding: 10px 12px;
+  padding: 12px 12px;
   border-radius: 8px;
   text-decoration: none;
   font-size: 15px;
@@ -444,7 +444,7 @@ select {
   margin-top: 12px;
   text-align: center;
   font-size: 14px;
-  color: var(--muted);
+  color: var(--ink-3);
 }
 
 @media (max-width: 640px) {
@@ -1179,6 +1179,11 @@ select {
   font-size: 15px;
   line-height: 24px;
   color: var(--ink);
+  overflow-wrap: anywhere;
+}
+
+.footer__list--contact a {
+  overflow-wrap: anywhere;
 }
 
 .footer__bottom {
