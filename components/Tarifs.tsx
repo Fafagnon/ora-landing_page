@@ -17,9 +17,20 @@ export default function Tarifs() {
   return (
     <section id="tarifs" className="section" aria-labelledby="tarifs-title">
       <div className="wrap">
-        <div className="section__head">
-          <h2 id="tarifs-title" className="h2">Tarifs et comparatif</h2>
-          <p className="lead">Le logiciel en abonnement, les services sur devis. Choisissez selon votre besoin.</p>
+        <div className="split split--reverse">
+          <div className="split__visual">
+            <img
+              src="/illustrations/elevage-suivi.svg"
+              width={640}
+              height={420}
+              alt="Un technicien ORA Groupe suit un élevage de bovins et d'ovins sur sa tablette, courbe de progression en hausse"
+              loading="lazy"
+            />
+          </div>
+          <div className="split__text">
+            <h2 id="tarifs-title" className="h2">Tarifs et comparatif</h2>
+            <p className="lead">Le logiciel en abonnement, les services sur devis. Choisissez selon votre besoin.</p>
+          </div>
         </div>
 
         <div className="prices">
