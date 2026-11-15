@@ -16,14 +16,14 @@ export default function Gestion() {
               src="/illustrations/ora-gestion.svg"
               width={730}
               height={380}
-              alt="Un propriétaire à son bureau consulte le bilan de sa ferme, pendant qu'un technicien ORA travaille sur place"
+              alt="Un propriétaire à son bureau consulte le bilan de sa ferme, pendant qu'un technicien ORA Groupe travaille sur place"
               loading="lazy"
             />
           </div>
           <div className="split__text">
             <h2 id="gestion-title" className="h2">Vous n&apos;êtes pas sur place, nos techniciens le sont</h2>
             <p className="lead">
-              ORA gère votre ferme à votre place. Nos techniciens travaillent avec le logiciel ORA et vous envoient le bilan chaque semaine.
+              ORA Groupe gère votre ferme à votre place. Nos techniciens travaillent avec le logiciel ORA Groupe et vous envoient le bilan chaque semaine.
             </p>
 
             <dl className="ledger">

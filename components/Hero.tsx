@@ -3,7 +3,7 @@
 import { site } from "@/lib/site.config";
 
 export default function Hero() {
-  const whatsappBurkinaUrl = `https://wa.me/${site.whatsappBurkina}?text=Bonjour%20ORA,%20je%20souhaite%20des%20renseignements.`;
+  const whatsappBurkinaUrl = `https://wa.me/${site.whatsappBurkina}?text=Bonjour%20ORA%20Groupe,%20je%20souhaite%20des%20renseignements.`;
 
   return (
     <section className="hero" aria-labelledby="hero-heading">
@@ -14,7 +14,7 @@ export default function Hero() {
           </h1>
 
           <p className="hero__lead rise" style={{ ["--i" as string]: 1 }}>
-            <strong>ORA</strong> est un logiciel qui facilite le suivi global de votre élevage, et un cabinet dont les techniciens gèrent votre ferme à votre place avec ce même logiciel.
+            <strong>ORA Groupe</strong> est un logiciel qui facilite le suivi global de votre élevage, et un cabinet dont les techniciens gèrent votre ferme à votre place avec ce même logiciel.
           </p>
 
           <div className="hero__fork rise" style={{ ["--i" as string]: 2 }}>
@@ -24,7 +24,7 @@ export default function Hero() {
             </a>
             <a className="fork" href="#gestion">
               <span className="fork__when">Je ne suis pas sur place</span>
-              <span className="fork__what">Je confie ma ferme aux techniciens ORA</span>
+              <span className="fork__what">Je confie ma ferme aux techniciens ORA Groupe</span>
             </a>
           </div>
 
@@ -61,7 +61,7 @@ export default function Hero() {
             src="/illustrations/ora-hero.svg"
             width={730}
             height={380}
-            alt="Un technicien ORA consulte l'élevage sur sa tablette, dans le poulailler, et le bilan part vers le propriétaire"
+            alt="Un technicien ORA Groupe consulte l'élevage sur sa tablette, dans le poulailler, et le bilan part vers le propriétaire"
           />
         </div>
       </div>

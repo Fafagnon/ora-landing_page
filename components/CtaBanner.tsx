@@ -108,7 +108,7 @@ export default function CtaBanner() {
             {submitted ? (
               <div className="form-success" role="status">
                 <h3>Demande envoyée</h3>
-                <p>Merci {fullName}. Un conseiller ORA vous recontactera sous 24 heures ouvrées concernant votre demande ({formule === "gestion" ? "Gestion déléguée" : "Logiciel ORA"}).</p>
+                <p>Merci {fullName}. Un conseiller ORA Groupe vous recontactera sous 24 heures ouvrées concernant votre demande ({formule === "gestion" ? "Gestion déléguée" : "Logiciel ORA Groupe"}).</p>
               </div>
             ) : (
               <form className="form" onSubmit={handleSubmit}>
@@ -121,8 +121,8 @@ export default function CtaBanner() {
                     onChange={(e) => setFormule(e.target.value)}
                   >
                     <option value="" disabled>Sélectionnez une formule</option>
-                    <option value="logiciel">Logiciel ORA (autonomie sur place)</option>
-                    <option value="gestion">Gestion déléguée (techniciens ORA sur place)</option>
+                    <option value="logiciel">Logiciel ORA Groupe (autonomie sur place)</option>
+                    <option value="gestion">Gestion déléguée (techniciens ORA Groupe sur place)</option>
                   </select>
                 </div>
 
@@ -197,7 +197,7 @@ export default function CtaBanner() {
                 Un accompagnement dédié dès votre premier jour
               </h3>
               <p className="lead" style={{ fontSize: 16, lineHeight: "24px", marginTop: 12 }}>
-                Que vous choisissiez d&apos;utiliser le logiciel ORA en autonomie ou de confier votre élevage à nos techniciens, notre équipe vous aide à structurer vos opérations sans interruption d&apos;activité.
+                Que vous choisissiez d&apos;utiliser le logiciel ORA Groupe en autonomie ou de confier votre élevage à nos techniciens, notre équipe vous aide à structurer vos opérations sans interruption d&apos;activité.
               </p>
             </div>
           </div>

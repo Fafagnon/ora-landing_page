@@ -18,7 +18,7 @@ export default function ProductShowcase() {
     {
       category: "Approvisionnement & Sécurité",
       title: "L'autonomie d'aliment calculée en jours réels",
-      desc: "Connaître le tonnage restant en magasin ne suffit pas. ORA traduit automatiquement vos réserves en nombre de jours d'autonomie restant pour nourrir votre cheptel, et déclenche une alerte dès qu'une référence passe sous le stock de sécurité.",
+      desc: "Connaître le tonnage restant en magasin ne suffit pas. ORA Groupe traduit automatiquement vos réserves en nombre de jours d'autonomie restant pour nourrir votre cheptel, et déclenche une alerte dès qu'une référence passe sous le stock de sécurité.",
       image: "/app/stocks-autonomie.png",
       caption: "Gestion des stocks · Calcul de l'autonomie en jours et seuils d'alerte",
       points: [
@@ -31,7 +31,7 @@ export default function ProductShowcase() {
     {
       category: "Exclusivité Ouest-Africaine",
       title: "Fabrication d'aliment et formulation sur mesure",
-      desc: "En Afrique de l'Ouest, mélanger sa propre provende à la ferme permet de baisser les coûts de 20 à 30 %. ORA intègre un module de provenderie unique : enregistrez vos formules (maïs, tourteau de soja, son, coquilles, prémix) et laissez l'outil calculer les proportions exactes.",
+      desc: "En Afrique de l'Ouest, mélanger sa propre provende à la ferme permet de baisser les coûts de 20 à 30 %. ORA Groupe intègre un module de provenderie unique : enregistrez vos formules (maïs, tourteau de soja, son, coquilles, prémix) et laissez l'outil calculer les proportions exactes.",
       image: "/app/provenderie-formules.png",
       caption: "Module provenderie · Production d'aliments à partir de formules réutilisables",
       points: [
@@ -44,7 +44,7 @@ export default function ProductShowcase() {
     {
       category: "Trésorerie & Marges",
       title: "Suivi rigoureux des ventes et des créances clients",
-      desc: "En aviculture, les revendeurs et demi-grossistes prennent fréquemment des plateaux d'œufs à crédit. ORA consigne chaque vente, les encaissements en espèces, les acomptes versés et le solde restant à recouvrer pour ne plus jamais égarer un paiement.",
+      desc: "En aviculture, les revendeurs et demi-grossistes prennent fréquemment des plateaux d'œufs à crédit. ORA Groupe consigne chaque vente, les encaissements en espèces, les acomptes versés et le solde restant à recouvrer pour ne plus jamais égarer un paiement.",
       image: "/app/finances-creances.png",
       caption: "Finances · Ventes d'œufs, règlements en espèces et créances clients",
       points: [
@@ -63,7 +63,7 @@ export default function ProductShowcase() {
                 <span className="section-meta__num">Au cœur de l&apos;application</span>
                 <h2 id="screens-title">Des écrans conçus pour la réalité du terrain</h2>
                 <p className="lead" style={{ marginTop: 12 }}>
-                  Chaque module répond à une décision critique de votre exploitation. Saisissez vos chiffres en deux minutes au poulailler, ORA structure vos opérations.
+                  Chaque module répond à une décision critique de votre exploitation. Saisissez vos chiffres en deux minutes au poulailler, ORA Groupe structure vos opérations.
                 </p>
               </div>
 
@@ -80,7 +80,7 @@ export default function ProductShowcase() {
                         />
                         <div className="screen-item__caption-bar">
                           <span>{s.caption}</span>
-                          <strong>ORA</strong>
+                          <strong>ORA Groupe</strong>
                         </div>
                       </div>
 

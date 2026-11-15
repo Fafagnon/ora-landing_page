@@ -4,7 +4,7 @@ export default function Gallery() {
   const photos = [
     {
       src: "/pexels-gonuldenbirkare-2148244190-37006636.jpg",
-      alt: "Volailles saines et vigoureuses dans un élevage suivi par ORA",
+      alt: "Volailles saines et vigoureuses dans un élevage suivi par ORA Groupe",
       caption: "🐔 Suivi régulier des lots & maîtrise des taux de mortalité",
       tag: "Santé du Cheptel",
     },
@@ -23,7 +23,7 @@ export default function Gallery() {
           <span className="section-tag">Ancrage &amp; Terroir</span>
           <h2 id="gallery-title">Des Fermes Vivantes &amp; Rentables</h2>
           <p className="lead" style={{ marginInline: "auto", marginTop: 12 }}>
-            Chaque jour sur le terrain au Togo et au Burkina Faso, ORA accompagne les éleveurs pour transformer leurs fermes en entreprises prospères.
+            Chaque jour sur le terrain au Togo et au Burkina Faso, ORA Groupe accompagne les éleveurs pour transformer leurs fermes en entreprises prospères.
           </p>
         </div>
 
