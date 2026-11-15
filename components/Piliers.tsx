@@ -39,7 +39,7 @@ export default function Piliers() {
           <div className="split__text">
             <h2 id="logiciel-title" className="h2">Le logiciel pour suivre votre ferme vous-même</h2>
             <p className="lead">
-              Du poulailler au bilan financier, ORA Groupe regroupe vos opérations au même endroit, sans carnets ni feuilles de calcul.
+              C&apos;est l&apos;outil que nos techniciens utilisent chaque jour sur les exploitations que nous suivons. Utilisez-le vous aussi pour piloter votre ferme, du poulailler au bilan financier, sans carnets ni feuilles de calcul.
             </p>
           </div>
           <div className="split__visual">

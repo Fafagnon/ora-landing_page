@@ -1,30 +1,26 @@
 "use client";
 
-import { site } from "@/lib/site.config";
-
 export default function Hero() {
-  const whatsappBurkinaUrl = `https://wa.me/${site.whatsappBurkina}?text=Bonjour%20ORA%20Groupe,%20je%20souhaite%20des%20renseignements.`;
-
   return (
     <section className="hero" aria-labelledby="hero-heading">
       <div className="wrap hero__grid">
         <div className="hero__content">
           <h1 id="hero-heading" className="hero__title rise" style={{ ["--i" as string]: 0 }}>
-            Votre élevage, suivi au jour le jour
+            Votre projet agricole, notre expertise !
           </h1>
 
           <p className="hero__lead rise" style={{ ["--i" as string]: 1 }}>
-            <strong>ORA Groupe</strong> est un logiciel qui facilite le suivi global de votre élevage, et un cabinet dont les techniciens gèrent votre ferme à votre place avec ce même logiciel.
+            <strong>ORA Groupe</strong> étudie, aménage et gère votre projet agricole, où que vous soyez. Le logiciel que nos techniciens utilisent chaque jour sur le terrain, vous pouvez aussi l&apos;utiliser vous-même, en abonnement.
           </p>
 
           <div className="hero__fork rise" style={{ ["--i" as string]: 2 }}>
-            <a className="fork" href="#logiciel">
-              <span className="fork__when">Je suis sur place</span>
-              <span className="fork__what">Je suis ma ferme moi-même avec le logiciel</span>
+            <a className="fork" href="#services">
+              <span className="fork__when">Je confie mon projet</span>
+              <span className="fork__what">Conseil, études, gestion et formation par nos équipes</span>
             </a>
-            <a className="fork" href="#gestion">
-              <span className="fork__when">Je ne suis pas sur place</span>
-              <span className="fork__what">Je confie ma ferme aux techniciens ORA Groupe</span>
+            <a className="fork" href="#logiciel">
+              <span className="fork__when">Je pilote moi-même</span>
+              <span className="fork__what">Le logiciel de suivi, en abonnement</span>
             </a>
           </div>
 
@@ -34,19 +30,22 @@ export default function Hero() {
               href="#contact"
               onClick={() => {
                 if (typeof window !== "undefined") {
+                  window.dispatchEvent(new CustomEvent("ora:select-formule", { detail: "gestion" }));
+                }
+              }}
+            >
+              Demander un service
+            </a>
+            <a
+              className="btn btn--secondary"
+              href="#contact"
+              onClick={() => {
+                if (typeof window !== "undefined") {
                   window.dispatchEvent(new CustomEvent("ora:select-formule", { detail: "logiciel" }));
                 }
               }}
             >
-              Essayer maintenant
-            </a>
-            <a
-              className="btn btn--secondary"
-              href={whatsappBurkinaUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Nous contacter
+              Essayer le logiciel
             </a>
           </div>
 
@@ -58,10 +57,10 @@ export default function Hero() {
 
         <div className="hero__visual">
           <img
-            src="/illustrations/ora-hero.svg"
+            src="/illustrations/projet-hero.svg"
             width={730}
             height={380}
-            alt="Un technicien ORA Groupe consulte l'élevage sur sa tablette, dans le poulailler, et le bilan part vers le propriétaire"
+            alt="Un technicien ORA Groupe suit l'aménagement d'un bâtiment d'élevage sur sa tablette, avec relevé de terrain et plan coté"
           />
         </div>
       </div>

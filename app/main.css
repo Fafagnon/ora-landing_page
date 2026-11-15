@@ -366,6 +366,10 @@ select {
   margin-bottom: 48px;
 }
 
+.section__cta {
+  margin-top: 40px;
+}
+
 .split {
   display: grid;
   gap: 40px;
@@ -637,10 +641,14 @@ select {
     gap: 4px 0;
   }
 
-  .points li+li::before {
+  .points li::after {
     content: "/";
     margin: 0 12px;
     color: var(--rule);
+  }
+
+  .points li:last-child::after {
+    content: none;
   }
 }
 
@@ -1133,6 +1141,12 @@ select {
   font-size: 14px;
   line-height: 20px;
   color: var(--ink-3);
+}
+
+.footer__list--contact li > span + span {
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--ink);
 }
 
 .footer__bottom {

@@ -13,17 +13,17 @@ export default function Footer() {
               <Image src="/logo-ora.png" alt="ORA Groupe" width={92} height={40} className="footer__logo" />
             </a>
             <p>
-              Cabinet de conseil et de gestion d&apos;élevage en Afrique. Logiciel de suivi et gestion déléguée pour exploitations avicoles et agricoles.
+              Entreprise de gestion de projets agricoles. Conseil, études, gestion d&apos;exploitations et formation, et le logiciel de suivi utilisé par nos équipes.
             </p>
           </div>
 
           <div>
             <h3 className="footer__title">Navigation</h3>
             <ul className="footer__list">
+              <li><a href="#services">Nos services</a></li>
               <li><a href="#logiciel">Logiciel</a></li>
-              <li><a href="#gestion">Gestion déléguée</a></li>
               <li><a href="#tarifs">Tarifs et comparatif</a></li>
-              <li><a href="#contact">Demander un essai</a></li>
+              <li><a href="#contact">Demander un essai ou un service</a></li>
               {site.appUrl ? <li><a href={site.appUrl}>Espace client</a></li> : null}
             </ul>
           </div>
@@ -32,11 +32,11 @@ export default function Footer() {
             <h3 className="footer__title">Contact</h3>
             <ul className="footer__list footer__list--contact">
               <li>
-                <span>Togo</span>
-                <a href={`tel:${site.phoneTogo.replace(/\s+/g, "")}`}>{site.phoneTogo}</a>
+                <span>Siège</span>
+                <span>Ouagadougou, Burkina Faso</span>
               </li>
               <li>
-                <span>Burkina Faso</span>
+                <span>Téléphone</span>
                 <a href={`tel:${site.phoneBurkina.replace(/\s+/g, "")}`}>{site.phoneBurkina}</a>
               </li>
               <li>
