@@ -1,6 +1,6 @@
-// Source unique des informations ORA
+// Source unique des informations ORA Groupe
 export const site = {
-  name: "ORA",
+  name: "ORA Groupe",
   price: "5 000 F CFA",
   trial: "1 mois d'essai gratuit",
   countries: "Afrique",

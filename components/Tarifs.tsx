@@ -5,14 +5,14 @@ import { site } from "@/lib/site.config";
 const lignes = [
   { critere: "Profil visé", logiciel: "Éleveur ou gérant présent au quotidien", gestion: "Propriétaire non résident, cadre urbain, diaspora" },
   { critere: "Temps requis", logiciel: "Une saisie quotidienne sur smartphone", gestion: "Aucun, la gestion est déléguée" },
-  { critere: "Présence terrain", logiciel: "Assurée par vos soins au bâtiment", gestion: "Techniciens ORA déployés sur votre ferme" },
+  { critere: "Présence terrain", logiciel: "Assurée par vos soins au bâtiment", gestion: "Techniciens ORA Groupe déployés sur votre ferme" },
   { critere: "Connexion internet", logiciel: "Saisie des données journalières même hors ligne", gestion: "Aucune connexion requise de votre part" },
   { critere: "Suivi des résultats", logiciel: "Tableaux de bord et alertes en direct", gestion: "Bilans hebdomadaires et photos sur WhatsApp" },
   { critere: "Tarification", logiciel: `${site.price} / mois, 1 mois d'essai offert`, gestion: "Sur devis, selon la taille du cheptel" },
 ];
 
 export default function Tarifs() {
-  const whatsappAdvisorUrl = `https://wa.me/${site.whatsapp}?text=Bonjour%20ORA,%20je%20souhaite%20%C3%A9changer%20avec%20un%20conseiller.`;
+  const whatsappAdvisorUrl = `https://wa.me/${site.whatsapp}?text=Bonjour%20ORA%20Groupe,%20je%20souhaite%20%C3%A9changer%20avec%20un%20conseiller.`;
 
   return (
     <section id="tarifs" className="section" aria-labelledby="tarifs-title">

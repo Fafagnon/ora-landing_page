@@ -9,8 +9,8 @@ export default function Footer() {
       <div className="wrap">
         <div className="footer__grid">
           <div className="footer__brand">
-            <a href="#" aria-label="ORA, retour en haut de page">
-              <Image src="/logo-ora.png" alt="ORA" width={92} height={40} className="footer__logo" />
+            <a href="#" aria-label="ORA Groupe, retour en haut de page">
+              <Image src="/logo-ora.png" alt="ORA Groupe" width={92} height={40} className="footer__logo" />
             </a>
             <p>
               Cabinet de conseil et de gestion d&apos;élevage en Afrique. Logiciel de suivi et gestion déléguée pour exploitations avicoles et agricoles.
