@@ -60,7 +60,7 @@ export default function Hero() {
             src="/illustrations/projet-hero.svg"
             width={730}
             height={380}
-            alt="Un technicien ORA Groupe suit l'aménagement d'un bâtiment d'élevage sur sa tablette, avec relevé de terrain et plan coté"
+            alt="Un technicien ORA Groupe consulte sa tablette face à un enclos avec un bœuf, une poule et un lapin, pendant qu'un bâtiment d'élevage se construit et qu'un plan apparaît au-dessus"
           />
         </div>
       </div>
